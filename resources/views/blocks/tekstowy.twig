@@ -1,0 +1,27 @@
+{#
+  Title: tekstowy
+  Description: pole tekstowe
+  Category: testblockcat
+  Icon: editor-table
+  Keywords: pole tekstowe
+  Icon: editor-table
+  Mode: edit
+  Align: full
+  PostTypes: page post
+  SupportsAlign: none
+  SupportsMode: false
+  SupportsMultiple: true
+  Example: { "poleTekstowe": "Lorem ipstum" }
+#}
+
+<section class="tekstowy">
+	<div class="l-row">
+		<div class="l-col12 l-off1">
+			<div class="l-row12">
+				<div class="l-col8 l-off4">
+					{{ post.meta('poletekstowe') }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

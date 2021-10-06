@@ -1,0 +1,55 @@
+<nav class="header__menu__desktop l-col10">
+	<ul>
+		{% for item in mainMenu.get_items %}
+			{% if item.get_children %}
+
+				<li class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link {{ item.class }}">
+						{{ item.title }}
+					</a>
+
+					{# Second level menu #}
+					<ul class="navbar-dropdown is-hover second-level">
+						{% for child in item.get_children %}
+							<li>
+								<a class="navbar-item {{child.class}} {{ child.get_children ? 'has-children' }}" href="{{ child.link }}">
+									{{ child.title }}
+								</a>
+								{% if child.get_children %}
+									{# Third level menu #}
+									<ul class="navbar-dropdown third-level">
+										{% for grandchild in child.get_children %}
+											<li>
+												<a class="navbar-item {{ grandchild.class }}" href="{{ grandchild.link }}">
+													{{ grandchild.title }}
+												</a>
+												{% if grandchild.get_children %}
+													{# Third level menu #}
+													<ul class="navbar-dropdown third-level">
+														{% for grandgrandchild in grandchild.get_children %}
+															<li>
+																<a class="navbar-item {{ grandgrandchild.class }}" href="{{ grandgrandchild.link }}">
+																	{{ grandgrandchild.title }}
+																</a>
+															</li>
+														{% endfor %}
+													</ul>
+												{% endif %}
+											</li>
+										{% endfor %}
+									</ul>
+								{% endif %}
+							</li>
+						{% endfor %}
+					</ul>
+				</li>
+			{% else %}
+				<li>
+					<a class="navbar-item {{ item.class }}" href="{{ item.link }}">
+						{{ item.title }}
+					</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+</nav>

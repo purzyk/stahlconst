@@ -1,0 +1,19 @@
+$slick-font-path: "~slick-carousel/slick/fonts/";
+$slick-loader-path: "~slick-carousel/slick/";
+
+@import "~slick-carousel/slick/slick", "~slick-carousel/slick/slick-theme";
+@import "~magnific-popup/src/css/main";
+@import "~aos/src/sass/aos";
+
+@import "abstract/variables";
+@import "base/reset";
+@import "base/typography";
+@import "base/base";
+@import "base/forms";
+@import "base/buttons";
+@import "layout/layout";
+@import "components/mobile-navbar";
+@import "components/desktop-navbar";
+@import "components/header";
+@import "components/footer";
+@import "components/all-blocks";

@@ -1,0 +1,125 @@
+.header__menu__mobile {
+    margin-bottom: 50px;
+    ul {
+        list-style: none;
+
+        li {
+            position: relative;
+            margin-bottom: 28px;
+
+            > a {
+                color: $white;
+                display: block;
+                padding: 14px 15px 14px 0;
+                font-size: 24px;
+                line-height: 36px;
+                text-decoration: none;
+                transition: all 0.15s ease-in-out;
+            }
+        }
+
+        ul {
+            li {
+                > a {
+                    padding: 14px 15px 14px 30px;
+                }
+            }
+
+            ul li > a {
+                padding: 14px 15px 14px 45px;
+            }
+        }
+    }
+
+    li > ul {
+        display: none;
+    }
+}
+
+.dropdown-plus {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+
+    &::after,
+    &::before {
+        position: absolute;
+        top: 24px;
+        right: 18px;
+        width: 13px;
+        height: 2px;
+        content: "";
+        background-color: #c1c1c1;
+    }
+
+    &::after {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    &.dropdown-open::after {
+        display: none;
+    }
+
+    @include breakpoint($md) {
+        display: none;
+    }
+}
+
+.burger-menu {
+    width: 40px;
+    height: 30px;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    z-index: 1999;
+    span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: $white;
+        border-radius: 3px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+    }
+
+    span:nth-child(1) {
+        top: 0px;
+    }
+
+    span:nth-child(2) {
+        top: 12px;
+    }
+
+    span:nth-child(3) {
+        top: 24px;
+        opacity: 0;
+    }
+
+    &.open span:nth-child(1) {
+        top: 12px;
+        transform: rotate(135deg);
+    }
+
+    &.open span:nth-child(2) {
+        opacity: 0;
+        left: -40px;
+    }
+
+    &.open span:nth-child(3) {
+        top: 12px;
+        opacity: 1;
+        transform: rotate(-135deg);
+    }
+
+    @include breakpoint($md) {
+        display: none;
+    }
+}

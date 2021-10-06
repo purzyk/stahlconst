@@ -1,0 +1,53 @@
+<a class="backToTop" id="back-top">
+	<i class="fa fa-arrow-up" aria-hidden="true"></i>
+</a>
+<footer class="footer">
+
+	<div class="l-row">
+		<div class="l-col12 l-off1">
+			<div class="l-row12">
+				<div class="l-col12 footer__przewin">
+					<div></div>
+					<a class="font14_12" id="ToTop">Przewin do góry</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="l-row footer__copy">
+		<div class="l-col12 l-off1">
+			<div class="l-row12">
+				<div class="l-col6 footer__slogan">
+					<p class="font28_24">{{ options.slogan}}</p>
+				</div>
+				<div class="l-col3 footer__tel">
+					<p class="font24">{{ options.telefon_i_mail}}</p>
+				</div>
+				<div class="l-col3 footer__address">
+					<p class="font24">{{ options.dane_adresowe}}</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="l-row footer__links">
+		<div class="l-col12 l-off1">
+			<div class="l-row12">
+				<div class="l-col6">
+					<p class="font12">
+						{{ options.copyright }}</p>
+				</div>
+				<div class="l-col6">
+					{% for item in options.linki_dolne %}
+						<a class="font12" href="{{item.link.url}}">{{item.link.title}}</a>
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</footer>
+{# end <div id="app"> #}
+
+{{ function('wp_footer') }}</body></html>

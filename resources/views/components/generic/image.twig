@@ -1,0 +1,5 @@
+<picture>
+	<source data-srcset="{{img_src|resize(1000)|towebp}}" type="image/webp">
+	<source data-srcset="{{img_src|resize(1000)}}" type="image/jpeg">
+	<img class="lazy" data-src="{{image.url|resize(1000)}}" {% if image.description %} alt="{{image.description}}" {% endif %}>
+</picture>

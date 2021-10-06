@@ -1,0 +1,161 @@
+.header {
+  width: 100%;
+  background: $blue;
+
+  &.open {
+    height: 100vh;
+
+    .header__menu {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch; // mobile safari
+    }
+  }
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    @include breakpoint($md) {
+      height: 140px;
+
+      justify-content: space-between;
+    }
+  }
+  &__socials {
+    display: none;
+    @include breakpoint($md) {
+      display: flex;
+    }
+    &__socials {
+      display: flex;
+      @include breakpoint($md) {
+        margin-left: 35px;
+      }
+
+      a {
+        margin-right: 56px;
+        display: inline-block;
+        @include breakpoint($md) {
+          margin-left: 24px;
+        }
+        img {
+          display: block;
+          max-width: inherit;
+          height: 32px;
+          @include breakpoint($md) {
+            height: inherit;
+          }
+        }
+      }
+    }
+    &__lang {
+      display: flex;
+      margin-bottom: 95px;
+      @include breakpoint($md) {
+        margin-bottom: 0;
+      }
+      &__item {
+        font-size: 2rem;
+        line-height: 3.2rem;
+        color: $lightGrey;
+        margin-right: 25px;
+        display: inline-block;
+        @include breakpoint($md) {
+          font-size: 1.2rem;
+          line-height: 2.6rem;
+          color: $lightGrey;
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    height: 100%;
+
+    max-height: 40px;
+    @include breakpoint($md) {
+      max-height: 57px;
+    }
+
+    img {
+      height: 100%;
+      transition: 0.2s all;
+    }
+  }
+
+  &__wrapper {
+    height: $headerSMHeight;
+    transition: all 0.2s;
+    padding: 10px 0;
+
+    @include breakpoint($md) {
+      height: $headerMDHeight;
+    }
+  }
+
+  &.smaller {
+    /*
+    box-shadow: 5px 8px 90px rgba(0, 0, 0, 0.2);
+
+    .header__wrapper {
+      height: $headerSMFixedHeight;
+
+      @include breakpoint($md) {
+        height: $headerMDFixedHeight;
+      }
+    }
+
+    .header__logo img {
+      height: 100%;
+
+      @include breakpoint($md) {
+        height: 100%;
+      }
+    }
+
+    &.open {
+      height: 100vh;
+
+      .header__menu {
+        height: calc(100vh - #{$headerSMHeight});
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; // mobile safari
+
+        @include breakpoint($md) {
+          height: calc(100vh - #{$headerMDHeight});
+        }
+      }
+    }
+    */
+  }
+}
+/*
+.is-sticky {
+  position: fixed;
+  z-index: 10;
+}
+
+.smaller {
+  padding-bottom: 0;
+}*/
+
+.header__mobileArea {
+  display: none;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: $blue;
+  padding-left: 70px;
+  padding-top: 21px;
+  left: 0;
+
+  @include breakpoint($md) {
+    display: none;
+  }
+}
+
+.navbar-dropdown {
+  display: none;
+}

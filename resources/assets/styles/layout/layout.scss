@@ -1,0 +1,30 @@
+/* Layout */
+.l-wrapper {
+  max-width: $xl;
+  margin: 0 auto;
+  padding: 0 $marinSize;
+
+  @include breakpoint($xl) {
+    padding: 0;
+  }
+}
+
+.l-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.l-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 24px;
+
+  &.--center {
+    align-items: center;
+  }
+
+  @include breakpoint($md) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}

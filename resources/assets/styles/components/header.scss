@@ -1,0 +1,98 @@
+.header {
+  width: 100%;
+  background: white;
+
+  &.open {
+    height: 100vh;
+
+    .header__menu {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch; // mobile safari
+    }
+  }
+
+  &__logo {
+    height: 100%;
+    grid-column: span 1;
+
+    @include breakpoint($md) {
+      grid-column: span 2;
+    }
+
+    img {
+      height: 100%;
+      transition: 0.2s all;
+    }
+  }
+
+  &__menu__desktop {
+    grid-column: span 10;
+  }
+
+  &__wrapper {
+    height: $headerSMHeight;
+    transition: all 0.2s;
+    padding: 10px 0;
+
+    @include breakpoint($md) {
+      height: $headerMDHeight;
+    }
+  }
+
+  &.smaller {
+    box-shadow: 5px 8px 90px rgba(0, 0, 0, 0.2);
+
+    .header__wrapper {
+      height: $headerSMFixedHeight;
+
+      @include breakpoint($md) {
+        height: $headerMDFixedHeight;
+      }
+    }
+
+    .header__logo img {
+      height: 100%;
+
+      @include breakpoint($md) {
+        height: 100%;
+      }
+    }
+
+    &.open {
+      height: 100vh;
+
+      .header__menu {
+        height: calc(100vh - #{$headerSMHeight});
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; // mobile safari
+
+        @include breakpoint($md) {
+          height: calc(100vh - #{$headerMDHeight});
+        }
+      }
+    }
+  }
+}
+
+.is-sticky {
+  position: fixed;
+  z-index: 10;
+}
+
+.smaller {
+  padding-bottom: 0;
+}
+
+.header__mobileArea {
+  display: none;
+  z-index: 1000;
+  position: relative;
+
+  @include breakpoint($md) {
+    display: none;
+  }
+}
+
+.navbar-dropdown {
+  display: none;
+}
