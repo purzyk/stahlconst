@@ -1,5 +1,5 @@
 /* Typography */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap");
 
 body {
   font-family: "IBM Plex Mono", monospace;
@@ -41,6 +41,35 @@ h2 {
     font-size: 2.4rem;
     line-height: 4rem;
   }
+  strong {
+    font-weight: 700;
+  }
+}
+.font38 {
+  font-size: 2rem;
+  line-height: 3.2rem;
+  @include breakpoint($md) {
+    font-size: 3.8rem;
+    line-height: 5rem;
+  }
+}
+.font80 {
+  font-size: 8rem;
+  line-height: 10rem;
+  @include breakpoint($md) {
+    font-size: 8rem;
+    line-height: 10rem;
+  }
+}
+.font16 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  @include breakpoint($md) {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
 }
 .font28_24 {
   font-size: 2.8rem;
@@ -49,4 +78,7 @@ h2 {
     font-size: 2.4rem;
     line-height: 4rem;
   }
+}
+.strong {
+  font-weight: 700;
 }

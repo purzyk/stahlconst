@@ -1,9 +1,9 @@
 <?php
-/* Template name: Strona tekstowa */
+/* Template name: Kariera */
 
 $context         = Timber::get_context();
 $post            = new TimberPost();
 $context['post'] = $post;
 
 
-Timber::render(['page-tekstowa.twig'], $context);
+Timber::render(['page-kariera.twig'], $context);

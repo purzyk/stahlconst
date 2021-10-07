@@ -1,0 +1,24 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<header class="title kariera__title">
+
+		<div class="l-row">
+			<div class="l-col12 borderTop">
+				<div class="l-row noPaddings">
+					<div class="l-col8 l-off4">
+						<p class="font38">{{ post.meta('opis') }}</p>
+
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</header>
+	{% include 'components/postsKariera.twig' %}
+
+
+	<!-- /content-wrapper -->
+{% endblock %}

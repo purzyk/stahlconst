@@ -1,0 +1,19 @@
+.kontakt__tresc {
+  background: $lightGrey;
+  padding-top: 200px;
+  padding-bottom: 174px;
+  &__kolumna {
+    border-top: 2px solid $black;
+    padding-top: 56px;
+  }
+  &__title {
+    margin-bottom: 35px;
+  }
+}
+.kontakt__tresc__lewa {
+  display: flex;
+  justify-content: space-between;
+}
+.kontakt__tresc__smaller {
+  margin-bottom: 6px;
+}

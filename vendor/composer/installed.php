@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '1b95275cfd1c223241303c172c00531b50b24a64',
     'name' => 'upstatement/timber-starter-theme',
   ),
   'versions' => 
@@ -50,15 +50,6 @@
       array (
         0 => '1.10.2',
       ),
-    ),
-    'palmiak/timber-acf-wp-blocks' => 
-    array (
-      'pretty_version' => '1.15',
-      'version' => '1.15.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '4d3ecfc31ba5c90964a4f0e7e10b97cb3a2ceb7e',
     ),
     'phar-io/manifest' => 
     array (
@@ -355,12 +346,12 @@
     ),
     'upstatement/timber-starter-theme' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '1b95275cfd1c223241303c172c00531b50b24a64',
     ),
     'webmozart/assert' => 
     array (

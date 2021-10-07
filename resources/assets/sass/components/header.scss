@@ -29,7 +29,7 @@
     &__socials {
       display: flex;
       @include breakpoint($md) {
-        margin-left: 35px;
+        margin-left: 12px;
       }
 
       a {
@@ -37,6 +37,7 @@
         display: inline-block;
         @include breakpoint($md) {
           margin-left: 24px;
+          margin-right: 0;
         }
         img {
           display: block;
@@ -64,7 +65,7 @@
           font-size: 1.2rem;
           line-height: 2.6rem;
           color: $lightGrey;
-          margin-left: 25px;
+          margin-left: 0;
         }
       }
     }

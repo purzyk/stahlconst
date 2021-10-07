@@ -16,8 +16,7 @@
     }
   ],
   "require": {
-	  "timber/timber": "1.*",
-    "palmiak/timber-acf-wp-blocks": "^1.15"
+	  "timber/timber": "1.*"
   },
   "require-dev": {
     "phpunit/phpunit": "5.7.16|6.*"

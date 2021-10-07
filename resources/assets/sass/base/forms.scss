@@ -1,4 +1,4 @@
-$checkHeigh: 10px;
+$checkHeigh: 24px;
 .wpcf7-acceptance {
     .wpcf7-list-item-label {
         display: block;
@@ -57,5 +57,162 @@ $checkHeigh: 10px;
         background: url("../images/checkbox_checked.svg") left top no-repeat;
         background-size: $checkHeigh;
         top: 0;
+    }
+}
+
+.form__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 58px;
+    label {
+        font-size: 12px;
+    }
+    input,
+    textarea {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 2.4rem;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        line-height: 4rem;
+        background: transparent;
+        width: 100%;
+        border-bottom: 2px solid $black;
+        margin-bottom: 8px;
+        padding: 5px 0 5px;
+        &::placeholder {
+            color: $white;
+        }
+        &.valid {
+            background: url("../images/valid.svg") top 20px right no-repeat;
+        }
+        &.error {
+            color: red;
+        }
+    }
+    textarea {
+        border-top: 2px solid $black;
+        max-height: 190px;
+    }
+    .wpcf7-submit {
+        width: initial;
+        font-size: 16px;
+        line-height: 26px;
+        border: 0;
+        text-decoration: underline;
+        text-transform: lowercase;
+    }
+    label {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.form__row__50 {
+    width: 48%;
+}
+.form__row__100 {
+    width: 100%;
+}
+.form__row__submit {
+    position: relative;
+    .wpcf7-submit {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+    }
+    .ajax-loader {
+        position: absolute;
+    }
+}
+
+.wpcf7-acceptance .wpcf7-list-item-label {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.wpcf7-list-item {
+    margin: 0;
+}
+
+.wpcf7-form {
+    .wpcf7-response-output {
+        display: none;
+    }
+    .form__response {
+        h4 {
+            font-size: 3.8rem;
+            line-height: 5rem;
+            margin-bottom: 32px;
+        }
+        p {
+            font-size: 2.4rem;
+            line-height: 4rem;
+        }
+    }
+    &.sent {
+        .form__main {
+            display: none;
+        }
+        .form__response {
+            display: block;
+        }
+    }
+    .form__response {
+        display: none;
+    }
+}
+
+.white {
+    .form__row {
+        input,
+        textarea {
+            &::placeholder {
+                color: #dddddd;
+            }
+        }
+    }
+}
+.blue {
+    .wpcf7-submit {
+        color: $white;
+    }
+    .borderTop {
+        border-color: $white;
+    }
+    h1,
+    p {
+        color: $white;
+    }
+    .form__row label {
+        color: $white;
+    }
+    .form__row input,
+    .form__row textarea {
+        border-color: $white;
+    }
+    &.skontaktuj {
+        background-color: #8394a7;
+    }
+    .form__row {
+        input,
+        textarea {
+            &::placeholder {
+                color: #9ba9b9;
+            }
+        }
+    }
+    .wpcf7-acceptance {
+        label span::before {
+            background: url("../images/check_white.svg") left top no-repeat;
+        }
+
+        label span::after {
+            background: url("../images/check_white.svg") left top no-repeat;
+        }
+
+        label input[type="checkbox"]:checked + span::after {
+            background: url("../images/check_white_checked.svg") left top no-repeat;
+        }
     }
 }

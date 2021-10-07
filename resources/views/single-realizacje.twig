@@ -1,0 +1,79 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="main-article singleRealizacje">
+		<header class="title">
+			<div class="l-row">
+				<div class="l-col12 singleRealizacje__cat">
+					{% for item in post.terms('category') %}
+						<p class="font24 strong">{{item}}</p>
+					{% endfor %}
+				</div>
+				<div class="l-col12 borderTop">
+					<h1>{{ post.title }}</h1>
+
+				</div>
+			</div>
+			<div class="l-row">
+
+				<div class="l-col8 l-off4">
+					<p class="font24">{{ post.meta('opis') }}</p>
+					<div class="singleRealizacje__tagi">
+						{% for item in post.terms('tag') %}
+							<p class="font12">#{{item}}</p>
+						{% endfor %}
+					</div>
+				</div>
+
+			</div>
+		</header>
+		{% for media_item in post.meta('tresc') %}
+			{% if media_item.acf_fc_layout == 'zdjecie_na_cala_szerokosc' %}
+
+				{% include 'components/generic/image-noresize.twig' with {img_src: media_item.zdjecie_na_cala_szerokosc} %}
+
+
+			{% elseif media_item.acf_fc_layout == 'zdjecie_oraz_tekst' %}
+
+
+				<section class="zdjecie_tekst {{media_item.kolor_tla}} ">
+					<div class="l-row">
+						{% if media_item.uklad == "lewo" %}
+
+							<div class="l-col6  zdjecie_tekst__img">
+								{% include 'components/generic/image.twig' with {img_src: media_item.zdjecie, width: 1000} %}
+							</div>
+							<div class="l-col5 l-off8 zdjecie_tekst__copy">
+								<p>{{ media_item.tekst }}</p>
+
+							</div>
+						{% else %}
+							<div class="l-col5 zdjecie_tekst__copy">
+								<p>{{ media_item.tekst }}</p>
+							</div>
+							<div class="l-col6 l-off7 zdjecie_tekst__img">
+								{% include 'components/generic/image.twig' with {img_src: media_item.zdjecie, width: 1000} %}
+							</div>
+						{% endif %}
+					</div>
+				</section>
+
+			{% elseif media_item.acf_fc_layout == 'sam_tekst' %}
+
+				<section class="tekstowy {{media_item.kolor_tla}}">
+					<div class="l-row">
+
+						<div class="l-col8 l-off4">
+							<p>{{ media_item.tekst }}</p>
+						</div>
+
+					</div>
+				</section>
+
+
+			{% endif %}
+		{% endfor %}
+
+		{% include 'components/skontaktuj.twig' %}
+	</article>
+{% endblock %}

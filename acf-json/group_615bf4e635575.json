@@ -27,7 +27,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-kariera.php"
+                "value": "page-tekstowa.php"
             }
         ]
     ],
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633422322
+    "modified": 1633513657
 }

@@ -1,5 +1,5 @@
 <picture>
-	<source data-srcset="{{img_src|resize(1000)|towebp}}" type="image/webp">
-	<source data-srcset="{{img_src|resize(1000)}}" type="image/jpeg">
-	<img class="lazy" data-src="{{image.url|resize(1000)}}" {% if image.description %} alt="{{image.description}}" {% endif %}>
+	<source data-srcset="{{Image(img_src).src|resize(width)|towebp}}" type="image/webp">
+	<source data-srcset="{{Image(img_src).src|resize(width)}}" type="image/jpeg">
+	<img class="lazy" data-src="{{Image(img_src).src|resize(width)}}" {% if Image(img_src).post_content %} alt="{{Image(img_src).post_content}}" {% endif %}>
 </picture>

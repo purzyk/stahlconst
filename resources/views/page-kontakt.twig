@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<main>
+
+		{% include 'components/skontaktuj.twig' with {class: 'white'} %}
+		<section class="kontakt__tresc">
+			<div class="l-row">
+				<div class="l-col12 kontakt__tresc__title">
+					<p class="font38">{{post.tytul}}</p>
+				</div>
+
+				<div class="l-col5">
+					<p class="font16 kontakt__tresc__smaller">{{ post.dane_kontaktowe }}</p>
+					<div class="kontakt__tresc__kolumna kontakt__tresc__lewa">
+						<p class="font24">{{ post.meta('dane_kontaktowe_lewa_kolumna') }}</p>
+						<p class="font24">{{ post.meta('dane_kontaktowe_prawa_kolumna') }}</p>
+					</div>
+				</div>
+				<div class="l-col6 l-off7">
+					<p class="font16 kontakt__tresc__smaller">{{ post.dane_rejestrowe }}</p>
+					<div class="kontakt__tresc__kolumna prawa">
+						<p class="font24">{{ post.meta('dane_rejestrowe_tresc') }}</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		{% include 'components/generic/image.twig' with {img_src: post.zdjecie, width: 1920} %}
+	</main>
+	<!-- /content-wrapper -->
+{% endblock %}

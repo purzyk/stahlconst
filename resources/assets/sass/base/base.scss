@@ -5,13 +5,13 @@ html {
 }
 
 img {
-  display: inline-block;
+  display: block;
   max-width: 100%;
   height: auto;
 }
 
 picture {
-  display: inline-block;
+  display: block;
   height: auto;
   max-width: 100%;
   width: 100%;
@@ -27,7 +27,6 @@ body.is-open {
 }
 
 main {
-  margin-top: 200px;
   /*
   overflow: hidden;
   padding-top: $headerSMHeight;
@@ -98,4 +97,8 @@ a {
 .borderTop {
   border-top: 4px solid $black;
   padding-top: 58px;
+}
+
+.addMargin {
+  padding-bottom: 155px;
 }

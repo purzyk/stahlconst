@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<article class="main-article">
+		<header class="oferty__title title">
+			<div class="l-row">
+				<div class="l-col12 borderTop">
+					<h1>{{ post.title }}</h1>
+
+				</div>
+			</div>
+			<div class="l-row">
+				<div class="l-col8 l-off4">
+					<p class="font24">{{ post.meta('opis') }}</p>
+				</div>
+			</div>
+		</header>
+		{% include 'components/generic/image.twig' with {img_src: post.thumbnail, width: 1920} %}
+		<section class="oferty__tresc">
+			<div class="l-row">
+				<div class="l-col8 l-off4">
+					{{ post.meta('tresc') }}
+				</div>
+			</div>
+		</section>
+		{% include 'components/realizacje.twig' %}
+		{% include 'components/skontaktuj.twig' %}
+	</article>
+{% endblock %}

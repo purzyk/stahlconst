@@ -1,0 +1,20 @@
+<section class="skontaktuj {{class}}">
+	<div class="title">
+		<div class="l-row">
+			<div class="l-col12 borderTop">
+				<h1>Skontaktuj się z nami</h1>
+			</div>
+		</div>
+	</div>
+	<div class="l-row">
+		<div class="l-col5">
+			<p class="font24">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum sapien dui, vel congue libero accumsan quis. Sed eu nibh et augue congue dapibus. Curabitur dictum scelerisque sapien at varius. Nam sollicitudin tempus pharetra.</p>
+		</div>
+		<div class="l-col6 l-off7">
+			{% filter shortcodes|raw %}
+				[contact-form-7 id="8" title="Skontaktuj się z nami"]
+			{% endfilter %}
+		</div>
+	</div>
+
+</section>

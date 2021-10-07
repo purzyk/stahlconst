@@ -35,13 +35,21 @@ class StarterSite extends Timber\Site {
 		$context['site']  = $this;
 		$context['skontaktuj'] = images_path('skontaktuj.png');
         
-        $postsPosts = Timber::get_posts(array(
-            'post_type' => 'post',
+        $karieraposts = Timber::get_posts(array(
+            'post_type' => 'kariera',
             'posts_per_page' => '-1',
+            'order' => 'DESC',
+            'orderby' => 'date',));
+    
+        $context['karieraposts'] = $karieraposts;
+
+		$karierapostsLatest = Timber::get_posts(array(
+            'post_type' => 'kariera',
+            'posts_per_page' => '3',
             'order' => 'ASC',
             'orderby' => 'date',));
     
-        $context['postsPosts'] = $postsPosts;
+        $context['karierapostsLatest'] = $karierapostsLatest;
 		
 		return $context;
 	}

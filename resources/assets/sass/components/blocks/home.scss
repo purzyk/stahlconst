@@ -1,0 +1,92 @@
+.home__hero {
+  height: 100vh;
+  background-size: cover !important;
+  position: relative;
+  &__inside {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+.home__hero__row {
+  color: $white;
+  h1 {
+    margin-top: 20vw;
+    border-top: 8px solid $white;
+    padding-top: 40px;
+  }
+}
+.home__hero__copy {
+  background: #8394a7;
+  color: $white;
+  padding-top: 118px;
+  padding-bottom: 200px;
+  .btn {
+    color: $white;
+  }
+}
+.home__hero__copy__border {
+  border-top: 4px solid $white;
+  margin-bottom: 54px;
+  padding-top: 58px;
+  p {
+    font-size: 38px;
+    line-height: 50px;
+  }
+}
+
+.home__oferta {
+  padding-top: 120px;
+  background-color: #f5f5f5;
+  padding-bottom: 10px;
+  margin-bottom: 100px;
+}
+
+.wartosci {
+  margin-bottom: 100px;
+  padding-bottom: 200px;
+}
+.wartosci__item {
+  width: 19%;
+  &__number {
+    color: #8394a7;
+    font-weight: 300;
+    margin-bottom: 65px;
+  }
+}
+.wartosci__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.wartosci__item__copy {
+  border-top: 2px solid $black;
+  margin-top: 10px;
+  padding-top: 19px;
+}
+.referencje {
+  padding-bottom: 100px;
+}
+.referencja {
+  margin-bottom: 50px;
+}
+.referencja__border {
+  border-top: 2px solid $black;
+  margin-top: 54px;
+  padding-top: 18px;
+  display: flex;
+  justify-content: flex-start;
+  figure {
+    max-height: 70px;
+    margin-right: 36px;
+  }
+  .referencja__copy {
+    align-self: center;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

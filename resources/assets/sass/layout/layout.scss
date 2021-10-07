@@ -3,29 +3,7 @@
 .l-row {
   max-width: $xl;
   margin: 0 auto;
-  padding: 0 26px;
-
-  @include breakpoint($xl) {
-    padding: 0;
-  }
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 26px;
-
-  @include breakpoint($md) {
-    grid-template-columns: repeat(14, 1fr);
-  }
-}
-.l-row12 {
-  max-width: $xl;
-  margin: 0 auto;
-  padding: 0;
-
-  @include breakpoint($xl) {
-    padding: 0;
-  }
-
+  padding: 0 $marinSize;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 26px;
@@ -33,7 +11,20 @@
   @include breakpoint($md) {
     grid-template-columns: repeat(12, 1fr);
   }
+  &.noPaddings {
+    padding: 0;
+  }
 }
+
+.l-row4 {
+  max-width: $xl;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 26px;
+}
+
 .l-col2 {
   grid-column-end: span 4;
   @include breakpoint($md) {
@@ -50,6 +41,12 @@
   grid-column-end: span 4;
   @include breakpoint($md) {
     grid-column-end: span 4;
+  }
+}
+.l-col5 {
+  grid-column-end: span 4;
+  @include breakpoint($md) {
+    grid-column-end: span 5;
   }
 }
 
@@ -89,5 +86,15 @@
 .l-off4 {
   @include breakpoint($md) {
     grid-column-start: 5;
+  }
+}
+.l-off7 {
+  @include breakpoint($md) {
+    grid-column-start: 7;
+  }
+}
+.l-off8 {
+  @include breakpoint($md) {
+    grid-column-start: 8;
   }
 }

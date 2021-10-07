@@ -1,0 +1,8 @@
+.skontaktuj {
+  background-color: $grey;
+  padding-bottom: 155px;
+  //padding-top: 200px;
+  &.white {
+    background-color: $white;
+  }
+}

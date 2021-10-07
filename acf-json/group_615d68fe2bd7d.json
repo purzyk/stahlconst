@@ -1,0 +1,250 @@
+{
+    "key": "group_615d68fe2bd7d",
+    "title": "Single - realizacje",
+    "fields": [
+        {
+            "key": "field_615d68fe32892",
+            "label": "opis",
+            "name": "opis",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_615d69e6ee24a",
+            "label": "tresc",
+            "name": "tresc",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_615d69f0a219d": {
+                    "key": "layout_615d69f0a219d",
+                    "name": "zdjecie_na_cala_szerokosc",
+                    "label": "zdjęcie na całą szerokość",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_615d6a09ee24b",
+                            "label": "zdjęcie na całą szerokość",
+                            "name": "zdjecie_na_cala_szerokosc",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "",
+                            "preview_size": "medium",
+                            "library": "",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_615d6a11ee24c": {
+                    "key": "layout_615d6a11ee24c",
+                    "name": "zdjecie_oraz_tekst",
+                    "label": "zdjęcie oraz tekst",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_615d6ac19a119",
+                            "label": "układ",
+                            "name": "uklad",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "lewo": "zdjęcie po lewej",
+                                "prawo": "zdjęcie po prawej"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "lewo",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_615d6b204aea4",
+                            "label": "kolor tła",
+                            "name": "kolor_tla",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "bialy": "bialy",
+                                "szary": "szary"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "bialy",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_615d6a11ee24d",
+                            "label": "zdjęcie",
+                            "name": "zdjecie",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "",
+                            "preview_size": "medium",
+                            "library": "",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_615d6a22ee24e",
+                            "label": "tekst",
+                            "name": "tekst",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "br"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_615d6a32ee24f": {
+                    "key": "layout_615d6a32ee24f",
+                    "name": "sam_tekst",
+                    "label": "sam tekst",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_615d6b64577e8",
+                            "label": "kolor tła",
+                            "name": "kolor_tla",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "bialy": "bialy",
+                                "szary": "szary"
+                            },
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "default_value": "bialy",
+                            "layout": "vertical",
+                            "return_format": "value",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_615d6a32ee251",
+                            "label": "tekst",
+                            "name": "tekst",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "br"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Dodaj wiersz",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "realizacje"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1633512314
+}

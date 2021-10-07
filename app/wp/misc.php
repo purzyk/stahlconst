@@ -106,31 +106,9 @@ add_filter( 'allowed_block_types_all', 'wpse324908_allowed_block_types', 10, 2 )
 
 function wpse324908_allowed_block_types( $allowed_blocks, $post ) {    
    $allowed_blocks = array(
-        'core/block', // <-- Include to show reusable blocks in the block inserter.
-        'core/image',
-        'core/paragraph',
-        'core/testblock',
-        'acf/testimonial',
-        'acf/testblock',
-        'acf/tekstowy'
     );     
     return $allowed_blocks;    
 }
-
-function testblockcat_block_categories( $categories ) {
-    $category_slugs = wp_list_pluck( $categories, 'slug' );
-    return in_array( 'testblockcat', $category_slugs, true ) ? $categories : array_merge(
-        $categories,
-        array(
-            array(
-                'slug'  => 'testblockcat',
-                'title' => __( 'Testowa kategoria', 'testblockcat' ),
-                'icon'  => null,
-            ),
-        )
-    );
-}
-add_filter( 'block_categories', 'testblockcat_block_categories' );
 
 
 
@@ -140,6 +118,9 @@ function my_toolbars( $toolbars )
 	$toolbars['Very Simple' ] = array();
 	$toolbars['Very Simple' ][1] = array('formatselect', 'bold', 'link' );
 	
+    $toolbars['With list' ] = array();
+	$toolbars['With list' ][1] = array('bold', 'bullist' );
+
 	if( ($key = array_search('code' , $toolbars['Full' ][2])) !== false )
 	{
 	    unset( $toolbars['Full' ][2][$key] );

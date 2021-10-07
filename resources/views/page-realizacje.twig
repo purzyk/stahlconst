@@ -1,0 +1,26 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<main>
+		<header class="realizacje__title">
+			<div class="l-row">
+				<div class="l-col12 l-off1 borderTop">
+					<h1>{{ post.title }}</h1>
+
+				</div>
+			</div>
+			<div class="l-row">
+				<div class="l-col12 l-off1">
+					<div class="l-row12">
+						<div class="l-col8 l-off4">
+							<p class="font24">{{ post.meta('opis') }}</p>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		{% include 'components/skontaktuj.twig' %}
+	</main>
+	<!-- /content-wrapper -->
+{% endblock %}

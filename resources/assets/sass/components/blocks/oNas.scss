@@ -1,0 +1,49 @@
+.oNas {
+  &__header {
+    height: 600px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: cover !important;
+
+    .borderTop {
+      border-color: $white;
+      padding-top: 60px;
+    }
+  }
+  &__blue {
+    padding-top: 120px;
+    background-color: #8394a7;
+    color: #fff;
+    .borderTop {
+      border-color: $white;
+    }
+    &__title {
+      max-width: 50%;
+      margin-bottom: 157px;
+    }
+  }
+}
+
+.oNas__images {
+  padding-top: 120px;
+  padding-bottom: 200px;
+}
+.oNas__copy {
+  padding-bottom: 180px;
+}
+.oNas__zespol__big {
+  margin-top: 158px;
+}
+.oNas__zespol__border {
+  border-top: 2px solid $black;
+  margin-top: 40px;
+  padding-top: 36px;
+  .oNas__zespol__stanowisko {
+    margin-bottom: 30px;
+  }
+}
+.oNas__zespol__item {
+  margin-bottom: 60px;
+}
