@@ -1,85 +1,90 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<main>
-		<div class="home__hero" style="background:url('{{Image(post.hero_image).src}}');">
-			<div class="home__hero__inside">
-				<div class="l-row home__hero__row">
 
-					<div class="l-col12">
-						<h1 class="font80">{{ post.meta('hero_title') }}</h1>
+	<div class="home__hero" style="background:url('{{Image(post.hero_image).src}}');">
+		<div class="home__hero__inside">
+			<div class="l-row home__hero__row">
+
+				<div class="l-col12">
+					<h1 class="font80">{{ post.meta('hero_title') }}</h1>
 
 
-					</div>
 				</div>
 			</div>
 		</div>
-		<div class="home__hero__copy">
+	</div>
+	<div class="home__hero__copy">
 
-			<div class="l-row">
+		<div class="l-row">
 
-				<div class="l-col8">
-					<div class="font38 home__hero__copy__border">
-						{{ post.meta('hero_copy') }}
-					</div>
-					<a href="" class="btn">więcej</a>
+			<div class="l-col8">
+				<div class="font38 home__hero__copy__border">
+					{{ post.meta('hero_copy') }}
 				</div>
+				<a href="" class="btn">więcej</a>
+			</div>
+
+		</div>
+	</div>
+	<div class="home__oferta">
+		<div class="l-row">
+			<div class="l-col12 borderTop addMargin">
+				<h1>Oferta</h1>
 
 			</div>
 		</div>
-		<div class="home__oferta">
+		<div class="oferta__lista">
 			<div class="l-row">
-				<div class="l-col12 borderTop addMargin">
-					<h1>Oferta</h1>
 
-				</div>
+				{% for item in post.meta('lista_ofert') %}
+					<div class="oferta__lista__item l-col3">
+						<a href="{{item.link.url}}" class="btn">
+							<figure>
+								<img src="{{Image(item.ikona).src}}">
+							</figure>
+							<div class="oferta__lista__item__border">
+								<h3 class="font24 oferta__lista__item__title">{{item.tytul}}</h3>
+								<p class="btn">więcej</p>
+							</div>
+						</a>
+					</div>
+				{% endfor %}
+
 			</div>
-			<div class="oferta__lista">
-				<div class="l-row">
+		</div>
+	</div>
+	{% include 'components/realizacje.twig' %}
 
-					{% for item in post.meta('lista_ofert') %}
-						<div class="oferta__lista__item l-col3">
-							<a href="{{item.link.url}}" class="btn">
-								<figure>
-									<img src="{{Image(item.ikona).src}}">
-								</figure>
-								<div class="oferta__lista__item__border">
-									<h3 class="font24 oferta__lista__item__title">{{item.tytul}}</h3>
-									<p class="btn">więcej</p>
-								</div>
-							</a>
+	<div class="wartosci">
+		<div class="l-row">
+			<div class="l-col12  borderTop addMargin">
+				<h1>{{post.wartosci_tytul}}</h1>
+			</div>
+			<div class="l-col12">
+				<div class="wartosci__items">
+					{% for item in post.meta('wartosci') %}
+						<div class="wartosci__item">
+							<p class="font80 wartosci__item__number">{{item.liczba}}</p>
+							<p class="font24 wartosci__item__copy">{{item.opis}}</p>
 						</div>
 					{% endfor %}
-
 				</div>
 			</div>
 		</div>
-		<div class="wartosci">
-			<div class="l-row">
-				<div class="l-col12  borderTop addMargin">
-					<h1>{{post.wartosci_tytul}}</h1>
-				</div>
-				<div class="l-col12">
-					<div class="wartosci__items">
-						{% for item in post.meta('wartosci') %}
-							<div class="wartosci__item">
-								<p class="font80 wartosci__item__number">{{item.liczba}}</p>
-								<p class="font24 wartosci__item__copy">{{item.opis}}</p>
-							</div>
-						{% endfor %}
-					</div>
-				</div>
+	</div>
+	<div class="referencje">
+
+		<div class="l-row">
+			<div class="l-col12 borderTop addMargin">
+				<h1>{{post.referencje_title}}</h1>
+
 			</div>
-		</div>
-		<div class="referencje">
-			<div class="l-row">
-				<div class="l-col12 borderTop addMargin">
-					<h1>{{post.referencje_title}}</h1>
-
-				</div>
 
 
-				<div class="l-col8 l-off4">
+			<div class="l-col8 l-off4 referencje__wrap">
+				<a class="referencje__next"></a>
+				<div class="js-referencje">
 					{% for item in post.meta('referencje') %}
 						<div class="referencja">
 							<p class="font24">{{item.tresc}}</p>
@@ -102,11 +107,12 @@
 					{% endfor %}
 
 				</div>
-
-
 			</div>
+
+
 		</div>
-		{% include 'components/skontaktuj.twig' %}
-	</main>
+	</div>
+	{% include 'components/skontaktuj.twig' %}
+
 	<!-- /content-wrapper -->
 {% endblock %}

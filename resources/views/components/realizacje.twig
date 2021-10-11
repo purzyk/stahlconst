@@ -1,10 +1,21 @@
 <section class="realizacje">
 	<div class="title">
 		<div class="l-row">
-			<div class="l-col12 borderTop">
+			<div class="l-col12 borderTop displayFlex">
 				<h1>Realizacje</h1>
+				<a href="#" class="btn">wszystkie realizacje</a>
 			</div>
 		</div>
+
+	</div>
+
+	<div class="js-realizacje realizacje__slick">
+
+		{% for post in realizacjePosts %}
+
+			{% include 'components/article__slick.twig' %}
+
+		{% endfor %}
 	</div>
 
 </section>

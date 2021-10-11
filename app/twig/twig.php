@@ -1,5 +1,8 @@
 <?php
 
+$pagination_mid_size = 1;
+
+$pagination_mid_size += 2; // DON'T TOUCH
 
 /**
  * Sets the directories (inside your theme) to find .twig files
@@ -34,6 +37,7 @@ class StarterSite extends Timber\Site {
 		$context['menu']  = new Timber\Menu();
 		$context['site']  = $this;
 		$context['skontaktuj'] = images_path('skontaktuj.png');
+		$context['kategorie_realizacji'] = Timber::get_terms('kategorie_realizacji');
         
         $karieraposts = Timber::get_posts(array(
             'post_type' => 'kariera',
@@ -48,8 +52,15 @@ class StarterSite extends Timber\Site {
             'posts_per_page' => '3',
             'order' => 'ASC',
             'orderby' => 'date',));
-    
         $context['karierapostsLatest'] = $karierapostsLatest;
+
+
+		$realizacjePosts = Timber::get_posts(array(
+            'post_type' => 'realizacje',
+            'posts_per_page' => '5',
+            'order' => 'ASC',
+            'orderby' => 'date',));
+        $context['realizacjePosts'] = $realizacjePosts;
 		
 		return $context;
 	}

@@ -23,7 +23,7 @@
 
 				{% for item in post.meta('lista_ofert') %}
 					<div class="oferta__lista__item l-col3">
-						<a href="{{item.link.url}}" class="btn">
+						<a href="{{item.link.link}}" class="btn">
 							<figure>
 								<img src="{{Image(item.ikona).src}}">
 							</figure>

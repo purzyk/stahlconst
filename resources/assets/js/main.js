@@ -46,6 +46,19 @@ $(window).scroll(function () {
 })
 
 
+if (document.cookie.indexOf("accepted_cookies=") < 0) {
+    $(".cookie-banner").delay(1000).fadeIn();
+}
+
+$('.close').click(function (e) {
+    document.cookie = "accepted_cookies=yes;"
+    $('.cookie-banner').fadeOut();
+});
+
+
+// cookie policy
+
+
 $("#ToTop").click(function () {
     $("body, html").animate({
         scrollTop: 0
@@ -56,32 +69,24 @@ $("#ToTop").click(function () {
 $(window).on('load', () => $('.pageloader').removeClass('is-active'))
 $(window).on('load', () => $('body').removeClass('is-loading'))
 
-$('.slides').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                nextArrow: '.arrow__right',
-                prevArrow: '.arrow__left'
-            }
-        }, {
-            breakpoint: 360,
-            settings: 'unslick'
-        },
-    ]
+$('.js-realizacje').slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+    centerMode: true,
+    centerPadding: '10%',
+    arrows: false,
+    slidesToShow: 2
 })
+
+$('.js-referencje').slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: true,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    nextArrow: $('.referencje__next')
+})
+
 
 AOS.init({once: true})
 
