@@ -2,65 +2,72 @@
 
 {% block content %}
 
-	<header class="title ">
+    <header class="title">
+        <div class="l-container">
 
-		<div class="l-row">
-			<div class="l-col12 borderTop">
-				<div class="l-row noPaddings">
-					<div class="l-col8 l-off4">
-						<p class="font38">Praca naszego zespołu zaowocowała dotychczas wieloma zrealizowanymi projektami konstrukcji stalowych.</p>
-
-
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-	</header>
-	<div class="l-row">
-		<div class="l-col12  borderTop">
-			<h1>Kategorie</h1>
-		</div>
-		<div class="l-col12 realizacje__lista__kategorii">
-			<div class="realizacje__lista__kategorii__kat">
+            <div class="l-row" data-aos="fade-up">
+                <div class="l-col12 borderTop">
+                    <div class="l-row noPaddings">
+                        <div class="l-col8 l-off4">
+                            <p class="font38">Praca naszego zespołu zaowocowała dotychczas wieloma zrealizowanymi projektami konstrukcji stalowych.</p>
 
 
-				{% for item in kategorie_realizacji %}
-					<a class="font16 realizacje__lista__kategorii__kat__item {% if item.id == taxID %}active{% endif %}" href="{{ site.link }}/kategorie_realizacji/{{item.slug}}">{{item.name}}</a>
-				{% endfor %}
-			</div>
-			<div class="realizacje__lista__kategorii__search">
-				<form role="search" method="get" id="searchform" action="{{ site.link }}">
-					<div class="form__row">
-						<div class="form__row__100 form__row__submit">
-							<label>
-								<span class="wpcf7-form-control-wrap your-message">
-									<input class="input" type="search" name="s" id="s" placeholder="Czego szukasz..." value=""></span>
-								wyszukiwana fraza<br>
-							</label>
-							<button type="submit" class="btn wpcf7-submit">
-								wyszukaj
-							</button>
-						</div>
-					</div>
+                        </div>
+                    </div>
+                </div>
 
-				</form>
+            </div>
+        </div>
 
-			</div>
-		</div>
-	</div>
-	<div class="l-row realizacje__lista__posts">
+    </header>
+    <div class="l-container">
+        <div class="l-row realizacje__kat" data-aos="fade-up">
+            <div class="l-col12  borderTop --px2">
+                <h1>Kategorie</h1>
+            </div>
+        </div>
+        <div class="l-row">
+            <div class="l-col12">
+                <div class="l-row">
 
-		{% for post in posts %}
 
-			{% include 'components/article.twig' %}
+                    {% for item in kategorie_realizacji %}
+                        <a class="l-col2 font16 realizacje__lista__kategorii__kat__item {% if item.id == taxID %}active{% endif %}" href="{{ site.link }}/kategorie_realizacji/{{ item.slug }}">{{ item.name }}</a>
+                    {% endfor %}
 
-		{% endfor %}
-	</div>
-	{% if posts.pagination.pages %}
-		{% include 'components/pagination.twig' %}
-	{% endif %}
-	{% include 'components/skontaktuj.twig' %}
+                    <div class="realizacje__lista__kategorii__search l-col3">
+                        <form role="search" method="get" id="searchform" action="{{ site.link }}">
+                            <div class="form__row">
+                                <div class="form__row__100 form__row__submit">
+                                    <label>
+                                        <span class="wpcf7-form-control-wrap your-message">
+                                            <input class="input" type="search" name="s" id="s" placeholder="Czego szukasz..." value=""></span>
+                                            wyszukiwana fraza<br></label>
+                                            <button type="submit" class="btn wpcf7-submit">
+                                                wyszukaj
+                                            </button>
+                                        </div>
+                                    </div>
 
-{% endblock %}
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="l-row realizacje__lista__posts" data-aos="fade-up">
+
+                    {% for post in posts %}
+
+                        {% include 'components/article.twig' %}
+
+                    {% endfor %}
+                </div>
+            </div>
+            {% if posts.pagination.pages %}
+                {% include 'components/pagination.twig' %}
+            {% endif %}
+            {% include 'components/skontaktuj.twig' %}
+
+        {% endblock %}

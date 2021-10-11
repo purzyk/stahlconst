@@ -1,4 +1,20 @@
 .title {
-  padding-bottom: 155px;
-  padding-top: 200px;
+  padding-top: 80px;
+  padding-bottom: 75px;
+  .l-container {
+    padding-bottom: 0;
+    padding-top: 0;
+    @include breakpoint($md) {
+      padding-bottom: 7.3%;
+      padding-top: 9.5%;
+    }
+  }
+  @include breakpoint($md) {
+    padding-bottom: 0;
+    padding-top: 0;
+    .l-row {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+  }
 }

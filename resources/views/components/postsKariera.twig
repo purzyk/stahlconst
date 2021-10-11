@@ -1,18 +1,20 @@
-<section class="posts__kariera">
-	<div class="l-row">
-		{% for item in karieraposts %}
-			<div class="l-col4 posts__kariera__item">
-				<a href="{{item.link}}">
-					<header>
-						<h3 class="font24">{{item.title}}</h3>
-					</header>
-					<div class="posts__kariera__item__copy">
-						<p>
-							{{item.lokalizacja}}</p>
-						<p class="btn">sprawdź</p>
-					</div>
-				</a>
-			</div>
-		{% endfor %}
+<section class="posts__kariera" data-aos="fade-up">
+	<div class="l-container">
+		<div class="l-row" data-aos="fade-up">
+			{% for item in karieraposts %}
+				<div class="l-col4 posts__kariera__item">
+					<a href="{{item.link}}">
+						<header>
+							<h3 class="font24">{{item.title}}</h3>
+						</header>
+						<div class="posts__kariera__item__copy">
+							<p>
+								{{item.lokalizacja}}</p>
+							<p class="btn">sprawdź</p>
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
 	</div>
 </section

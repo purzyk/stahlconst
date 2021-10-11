@@ -3,78 +3,93 @@
 {% block content %}
 	<div class="ofertaPage">
 		<header class="realizacje__title title">
-			<div class="l-row">
-				<div class="l-col12 l-off1 borderTop">
-					<h1>{{ post.meta('title') }}</h1>
+			<div class="l-container">
 
+				<div class="l-row" data-aos="fade-up">
+					<div class="l-col12 borderTop">
+						<h1>{{ post.meta('title') }}</h1>
+
+					</div>
 				</div>
-			</div>
-			<div class="l-row">
+				<div class="l-row singleOfertyBottom">
 
-				<div class="l-col8 l-off4">
-					<p class="font24">{{ post.meta('opis') }}</p>
+					<div class="l-col8 l-off4">
+						<p class="font24">{{ post.meta('opis') }}</p>
 
 
+					</div>
 				</div>
 			</div>
 		</header>
 		<div class="oferta__lista">
-			<div class="l-row">
+			<div class="l-container">
 
-				{% for item in post.meta('lista_ofert') %}
-					<div class="oferta__lista__item l-col3">
-						<a href="{{item.link.link}}" class="btn">
-							<figure>
-								<img src="{{Image(item.ikona).src}}">
-							</figure>
-							<div class="oferta__lista__item__border">
-								<h3 class="font24 oferta__lista__item__title">{{item.tytul}}</h3>
-								<p class="btn">więcej</p>
-							</div>
-						</a>
-					</div>
-				{% endfor %}
+				<div class="l-row" data-aos="fade-up">
 
+					{% for item in post.meta('lista_ofert') %}
+						<div class="oferta__lista__item l-col3">
+							<a href="{{item.link.link}}" class="btn">
+								<figure>
+									<img src="{{Image(item.ikona).src}}">
+								</figure>
+								<div class="oferta__lista__item__border">
+									<h3 class="font24 oferta__lista__item__title">{{item.tytul}}</h3>
+									<p class="btn">więcej</p>
+								</div>
+							</a>
+						</div>
+					{% endfor %}
+
+				</div>
 			</div>
 		</div>
 		{% include 'components/generic/image.twig' with {img_src: post.zdjecie, width: 1920} %}
 
 
 		<div class="realizacje__title title">
-			<div class="l-row">
-				<div class="l-col12 l-off1 borderTop">
-					<h1>{{ post.jak_pracujemy_title }}</h1>
+			<div class="l-container">
+
+				<div class="l-row" data-aos="fade-up">
+					<div class="l-col12 borderTop">
+						<h1>{{ post.jak_pracujemy_title }}</h1>
+
+					</div>
+				</div>
+				<div class="l-row" data-aos="fade-up">
+
+					<div class="l-col8 l-off4">
+						<p class="font24">{{ post.meta('jak_pracujemy_opis') }}</p>
+
+					</div>
 
 				</div>
-			</div>
-			<div class="l-row">
-
-				<div class="l-col8 l-off4">
-					<p class="font24">{{ post.meta('jak_pracujemy_opis') }}</p>
-
-				</div>
-
 			</div>
 		</div>
 		<div class="title technologie">
-			<div class="l-row">
-				<div class="l-col12 borderTop">
-					<h1>{{ post.wykorzystywana_technologia }}</h1>
+			<div class="l-container">
 
+				<div class="l-row" data-aos="fade-up">
+					<div class="l-col12 borderTop">
+						<h1>{{ post.wykorzystywana_technologia }}</h1>
+
+					</div>
 				</div>
 			</div>
-			<div class="l-row technologie__row">
+			<div class="l-container technologie__noPadding">
 
-				{% for item in post.meta('technologie') %}
-					<div class="technologie__item l-col3">
-						<figure>
-							{% include 'components/generic/image-noresize.twig' with {img_src: item.ikona} %}
+				<div class="l-row technologie__row" data-aos="fade-up">
 
-						</figure>
-						<p class="font24 technologie__item__border">{{item.opis}}</p>
-					</div>
-				{% endfor %}
+					{% for item in post.meta('technologie') %}
+						<div class="technologie__item l-col3">
+							<figure>
+								{% include 'components/generic/image-noresize.twig' with {img_src: item.ikona} %}
 
+							</figure>
+							<p class="font24 technologie__item__border">{{item.opis}}</p>
+						</div>
+					{% endfor %}
+
+				</div>
 			</div>
 		</div>
 		{% include 'components/skontaktuj.twig' %}

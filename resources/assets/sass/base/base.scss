@@ -96,11 +96,16 @@ a {
 
 .borderTop {
   border-top: 4px solid $black;
-  padding-top: 58px;
+  padding-top: 36px;
+  @include breakpoint($md) {
+    padding-top: 3.7% !important;
+  }
+  &.--px2 {
+    border-top: 2px solid $black;
+  }
 }
 
 .addMargin {
-  padding-bottom: 155px;
 }
 
 .displayFlex {

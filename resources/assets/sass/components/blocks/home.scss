@@ -22,16 +22,14 @@
 .home__hero__copy {
   background: #8394a7;
   color: $white;
-  padding-top: 118px;
-  padding-bottom: 200px;
+
   .btn {
     color: $white;
   }
 }
 .home__hero__copy__border {
   border-top: 4px solid $white;
-  margin-bottom: 54px;
-  padding-top: 58px;
+
   p {
     font-size: 38px;
     line-height: 50px;
@@ -39,22 +37,17 @@
 }
 
 .home__oferta {
-  padding-top: 120px;
   background-color: #f5f5f5;
   padding-bottom: 10px;
 }
 
 .wartosci {
-  margin-bottom: 100px;
-  padding-bottom: 200px;
-  padding-top: 120px;
 }
 .wartosci__item {
   width: 19%;
   &__number {
     color: #8394a7;
     font-weight: 300;
-    margin-bottom: 65px;
   }
 }
 .wartosci__items {
@@ -68,10 +61,8 @@
   padding-top: 19px;
 }
 .referencje {
-  padding-bottom: 100px;
 }
 .referencja {
-  margin-bottom: 50px;
   padding-right: 20%;
 }
 .referencja__border {
@@ -109,4 +100,44 @@
   height: 45px;
   display: block;
   background: url("../images/next.svg") center no-repeat;
+}
+
+.home__hero__copy {
+  .l-container {
+    padding-top: 5%;
+    padding-bottom: 9%;
+    .btn {
+      margin-top: 52px;
+      display: block;
+    }
+  }
+}
+
+.home__hero__copy__border {
+  padding-top: 5%;
+}
+
+.home__oferta {
+  .l-container {
+    padding-top: 5.5%;
+  }
+}
+
+.wartosci {
+  .l-container {
+    padding-top: 5%;
+    padding-bottom: 6%;
+  }
+  .addMargin {
+    padding-bottom: 10%;
+  }
+}
+.wartosci__item__number {
+  margin-bottom: 60px;
+}
+
+.referencje {
+  .l-container {
+    padding-bottom: 8.5%;
+  }
 }

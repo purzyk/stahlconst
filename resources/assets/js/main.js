@@ -68,25 +68,40 @@ $("#ToTop").click(function () {
 
 $(window).on('load', () => $('.pageloader').removeClass('is-active'))
 $(window).on('load', () => $('body').removeClass('is-loading'))
+function slickify() {
+    $('.js-realizacje').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        centerMode: true,
+        centerPadding: '10%',
+        arrows: false,
+        slidesToShow: 2,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: "unslick"
+            }
+        ]
+    })
 
-$('.js-realizacje').slick({
-    autoplay: true,
-    autoplaySpeed: 2000,
-    centerMode: true,
-    centerPadding: '10%',
-    arrows: false,
-    slidesToShow: 2
-})
-
-$('.js-referencje').slick({
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: true,
-    slidesToShow: 1,
-    adaptiveHeight: true,
-    nextArrow: $('.referencje__next')
-})
-
+    $('.js-referencje').slick({
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        slidesToShow: 1,
+        nextArrow: $('.referencje__next'),
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: "unslick"
+            }
+        ]
+    })
+}
+slickify();
+$(window).resize(function () {
+    slickify();
+});
 
 AOS.init({once: true})
 

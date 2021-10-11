@@ -1,5 +1,26 @@
 .btn {
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
     text-decoration: underline;
+    @include breakpoint($md) {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+}
+
+.arrowDown {
+    width: 45px;
+    height: 45px;
+    display: block;
+    background: url("../images/arrow_down.svg") center no-repeat;
+}
+
+.arrowDown__wrap {
+    position: relative;
+
+    .arrowDown {
+        position: absolute;
+        bottom: 20px;
+        left: -70px;
+    }
 }

@@ -1,28 +1,31 @@
-<div class="l-row">
-	<div class="l-col12">
-		<nav
-			class="pagination is-centered" role="navigation" aria-label="pagination">
+<div class="l-container">
+
+	<div class="l-row">
+		<div class="l-col12">
+			<nav
+				class="pagination is-centered" role="navigation" aria-label="pagination">
 
 
-			{# PAGINATION LIST #}
-			<ul class="pagination-list">
-				{% for page in pagination.pages %}
-					{% if page.link %}
-						<li>
-							<a href="{{ page.link }}" class="font38 {{ page.class }} pagination-link" aria-label="Goto page {{ page.title }}">{{ page.title }}</a>
-						</li>
-					{% else %}
-						{% if page.class == 'dots' %}
+				{# PAGINATION LIST #}
+				<ul class="pagination-list">
+					{% for page in pagination.pages %}
+						{% if page.link %}
 							<li>
-								<span class="font38 pagination-ellipsis">...</span>
+								<a href="{{ page.link }}" class="font38 {{ page.class }} pagination-link" aria-label="Goto page {{ page.title }}">{{ page.title }}</a>
 							</li>
 						{% else %}
-							<span class="font38 pagination-link is-current {{ page.class }}">{{ page.title }}</span>
+							{% if page.class == 'dots' %}
+								<li>
+									<span class="font38 pagination-ellipsis">...</span>
+								</li>
+							{% else %}
+								<span class="font38 pagination-link is-current {{ page.class }}">{{ page.title }}</span>
+							{% endif %}
 						{% endif %}
-					{% endif %}
-				{% endfor %}
-			</ul>
-		</nav>
+					{% endfor %}
+				</ul>
+			</nav>
 
+		</div>
 	</div>
 </div>

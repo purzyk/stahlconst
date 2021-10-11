@@ -35,11 +35,14 @@
   margin-bottom: 58px;
 }
 .kariera__tresc {
-  margin-bottom: 120px;
+  margin-bottom: 2%;
 }
 
 .posts__kariera {
-  padding: 136px 0 100px;
+  .l-container {
+    margin-top: 6%;
+    margin-bottom: 4.5%;
+  }
 }
 
 .posts__kariera__item {
@@ -65,5 +68,5 @@
 }
 
 .posts__kariera__title {
-  margin-bottom: 155px;
+  margin-bottom: 2%;
 }

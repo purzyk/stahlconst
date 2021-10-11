@@ -1,9 +1,7 @@
 /* Layout */
 
 .l-row {
-  max-width: $xl;
-  margin: 0 auto;
-  padding: 0 $marinSize;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 26px;
@@ -15,7 +13,12 @@
     padding: 0;
   }
 }
-
+.l-container {
+  max-width: $xl;
+  margin: 0 auto;
+  padding-left: 7%;
+  padding-right: 7%;
+}
 .l-row4 {
   max-width: $xl;
   margin: 0 auto;

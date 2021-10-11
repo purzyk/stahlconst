@@ -1,12 +1,12 @@
 .footer {
   background: $blue;
   color: $white;
-  padding-top: 70px;
-  padding-bottom: 76px;
 
   @include breakpoint($md) {
-    padding-top: 112px;
-    padding-bottom: 32px;
+    .footer__up {
+      padding-top: 5.7%;
+      padding-bottom: 0.4%;
+    }
   }
   a {
     color: $white;
@@ -31,14 +31,20 @@
     }
   }
   &__copy {
-    padding-top: 24px;
-    padding-bottom: 24px;
     @include breakpoint($md) {
-      padding-top: 50px;
-      padding-bottom: 50px;
+      .l-container {
+        padding-top: 2%;
+        padding-bottom: 0.5%;
+      }
     }
   }
   &__links {
+    @include breakpoint($md) {
+      .l-container {
+        padding-top: 2%;
+        padding-bottom: 2%;
+      }
+    }
     a {
       margin-right: 50px;
     }

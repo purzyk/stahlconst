@@ -1,8 +1,22 @@
 .skontaktuj {
   background-color: $grey;
-  padding-bottom: 155px;
+  padding-bottom: 55px;
+  @include breakpoint($md) {
+    padding-bottom: 0;
+  }
   //padding-top: 200px;
   &.white {
     background-color: $white;
+  }
+  .l-col5 {
+    margin-bottom: 50px;
+    @include breakpoint($md) {
+      margin-bottom: 0;
+    }
+  }
+}
+.skontaktuj__bottom {
+  @include breakpoint($md) {
+    padding-bottom: 7%;
   }
 }

@@ -15,46 +15,49 @@
 		</div>
 
 		<header class="header is-sticky">
-			<div class="l-row">
-				<div class="header__top l-col12">
+			<div class="l-container">
+
+				<div class="l-row">
+					<div class="header__top l-col12">
 
 
-					<a class="header__logo" href="{{ site.link }}">
-						<img class="header__logo__img" src="{{ Image(options.logo).src }}" alt="{{ options.logo.alt }}"/>
-					</a>
-					{% include 'components/navbar/desktop-navbar.twig' %}
-					<div class="header__socials">
+						<a class="header__logo" href="{{ site.link }}">
+							<img class="header__logo__img" src="{{ Image(options.logo).src }}" alt="{{ options.logo.alt }}"/>
+						</a>
+						{% include 'components/navbar/desktop-navbar.twig' %}
+						<div class="header__socials">
+							<div class="header__socials__lang">
+								<a class="header__socials__lang__item" href="#">en</a>
+								<a class="header__socials__lang__item" href="#">de</a>
+							</div>
+							<div class="header__socials__socials">
+								{% for item in options.socials %}
+									<a href="{{item.url}}"><img src="{{Image(item.ikona).src}}"></a>
+								{% endfor %}
+							</div>
+
+						</div>
+
+
+						<div class="burger-menu">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+
+
+					<div class="header__mobileArea">
 						<div class="header__socials__lang">
 							<a class="header__socials__lang__item" href="#">en</a>
 							<a class="header__socials__lang__item" href="#">de</a>
 						</div>
+						{% include 'components/navbar/mobile-navbar.twig' %}
 						<div class="header__socials__socials">
 							{% for item in options.socials %}
 								<a href="{{item.url}}"><img src="{{Image(item.ikona).src}}"></a>
 							{% endfor %}
 						</div>
-
-					</div>
-
-
-					<div class="burger-menu">
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</div>
-
-
-				<div class="header__mobileArea">
-					<div class="header__socials__lang">
-						<a class="header__socials__lang__item" href="#">en</a>
-						<a class="header__socials__lang__item" href="#">de</a>
-					</div>
-					{% include 'components/navbar/mobile-navbar.twig' %}
-					<div class="header__socials__socials">
-						{% for item in options.socials %}
-							<a href="{{item.url}}"><img src="{{Image(item.ikona).src}}"></a>
-						{% endfor %}
 					</div>
 				</div>
 			</div>
