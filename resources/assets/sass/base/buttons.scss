@@ -11,16 +11,9 @@
 .arrowDown {
     width: 45px;
     height: 45px;
-    display: block;
+    display: inline-block;
     background: url("../images/arrow_down.svg") center no-repeat;
 }
 
 .arrowDown__wrap {
-    position: relative;
-
-    .arrowDown {
-        position: absolute;
-        bottom: 20px;
-        left: calc(-7% + 20px);
-    }
 }

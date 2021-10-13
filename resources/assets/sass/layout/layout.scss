@@ -3,21 +3,44 @@
 .l-row {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 26px;
+  grid-template-columns: repeat(10, 1fr);
 
+  grid-column-gap: 4px;
   @include breakpoint($md) {
+    grid-column-gap: 26px;
     grid-template-columns: repeat(12, 1fr);
   }
+
+  grid-column-start: 2;
+  grid-column-end: span 10;
+  @include breakpoint($md) {
+    grid-column-start: 2;
+    grid-column-end: span 12;
+  }
+
   &.noPaddings {
     padding: 0;
   }
+  &.--wider {
+    @include breakpoint($md) {
+      grid-column-start: 2;
+      grid-column-end: span 13;
+    }
+  }
 }
 .l-container {
-  max-width: $xl;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  grid-column-gap: 4px;
+  @include breakpoint($md) {
+    grid-template-columns: repeat(14, 1fr);
+    grid-column-gap: 26px;
+  }
+  /*max-width: $xl;
   margin: 0 auto;
   padding-left: 7%;
-  padding-right: 7%;
+  padding-right: 7%;*/
 }
 .l-row4 {
   max-width: $xl;
@@ -41,56 +64,67 @@
     }
   }
 }
+.l-col1 {
+  @include breakpoint($md) {
+    grid-column-end: span 1;
+  }
+}
 .l-col2 {
-  grid-column-end: span 4;
+  grid-column-end: span 10;
   @include breakpoint($md) {
     grid-column-end: span 2;
   }
 }
 .l-col3 {
-  grid-column-end: span 4;
+  grid-column-end: span 10;
   @include breakpoint($md) {
     grid-column-end: span 3;
   }
 }
 .l-col4 {
-  grid-column-end: span 4;
+  grid-column-end: span 10;
   @include breakpoint($md) {
     grid-column-end: span 4;
   }
 }
 .l-col5 {
-  grid-column-end: span 4;
+  grid-column-end: span 10;
   @include breakpoint($md) {
     grid-column-end: span 5;
   }
 }
 
 .l-col6 {
-  grid-column-end: span 4;
+  grid-column-end: span 10;
   @include breakpoint($md) {
     grid-column-end: span 6;
   }
 }
 
 .l-col8 {
-  grid-column-end: span 4;
+  grid-column-end: span 10;
   @include breakpoint($md) {
     grid-column-end: span 8;
   }
 }
 
 .l-col10 {
-  grid-column-end: span 4;
+  grid-column-end: span 10;
   @include breakpoint($md) {
     grid-column-end: span 10;
   }
 }
 
 .l-col12 {
-  grid-column-end: span 4;
+  grid-column-end: span 10;
   @include breakpoint($md) {
     grid-column-end: span 12;
+  }
+}
+.l-col13 {
+  grid-column-end: span 10;
+  @include breakpoint($md) {
+    grid-column-end: span 13;
   }
 }
 

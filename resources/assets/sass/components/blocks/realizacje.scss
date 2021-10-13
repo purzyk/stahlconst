@@ -232,6 +232,7 @@
 
     .slick-slide {
       height: inherit !important;
+      width: 800px;
       > div {
         height: 100%;
         article {
@@ -250,7 +251,7 @@
             }
             .realizacje__lista__posts__tags {
               margin-top: auto;
-          }
+            }
           }
         }
       }

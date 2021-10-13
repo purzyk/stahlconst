@@ -5,13 +5,15 @@
     <div class="home__hero" style="background:url('{{ Image(post.hero_image).src }}');">
         <div class="home__hero__inside">
             <div class="l-container --desktop">
-
+                <div class="l-col1 arrowDown__wraper">
+                    <a href="#down" class="arrowDown"></a>
+                </div>
                 <div class="l-row home__hero__row">
 
                     <div class="l-col12 arrowDown__wrap">
                         <h1 class="font80">{{ post.meta('hero_title') }}</h1>
 
-                        <a href="#down" class="arrowDown"></a>
+
                     </div>
                 </div>
             </div>
@@ -33,10 +35,10 @@
     <div class="home__hero__copy">
         <div class="l-container">
 
-            <div id="down" class="l-row" data-aos="fade-up">
+            <div id="down" class="l-row home__hero__copy__border" data-aos="fade-up">
 
                 <div class="l-col8">
-                    <div class="font38 home__hero__copy__border">
+                    <div class="font38 ">
                         {{ post.meta('hero_copy') }}
                     </div>
                     <a href="" class="btn">więcej</a>

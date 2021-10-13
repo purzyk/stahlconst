@@ -70,13 +70,12 @@ $(window).on('load', () => $('.pageloader').removeClass('is-active'))
 $(window).on('load', () => $('body').removeClass('is-loading'))
 function slickify() {
     $('.js-realizacje').slick({
-        centerMode: true,
-        centerPadding: '10%',
-        arrows: false,
+                arrows: false,
+                variableWidth: true,
         slidesToShow: 2,
         responsive: [
             {
-                breakpoint: 767,
+                breakpoint: 1100,
                 settings: "unslick"
             }
         ]
@@ -90,7 +89,7 @@ function slickify() {
         nextArrow: $('.referencje__next'),
         responsive: [
             {
-                breakpoint: 767,
+                breakpoint: 1100,
                 settings: "unslick"
             }
         ]

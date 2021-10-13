@@ -16,7 +16,8 @@
     .--desktop {
       display: none;
       @include breakpoint($md) {
-        display: block;
+        display: grid;
+        align-items: flex-end;
       }
     }
   }
@@ -223,15 +224,10 @@
   }
 }
 
-.js-realizacje {
-  padding-left: 7%;
-  padding-right: 7%;
-  @include breakpoint($md) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
 .referencje__wrap__inside {
   position: relative;
+}
+
+.arrowDown__wraper {
+  text-align: center;
 }

@@ -1,7 +1,6 @@
 <section class="realizacje" data-aos="fade-up">
     <div class="title">
         <div class="l-container">
-
             <div class="l-row" data-aos="fade-up">
                 <div class="l-col12 borderTop displayFlex">
                     <h3 class="font38_24">Realizacje</h3>
@@ -11,14 +10,17 @@
         </div>
 
     </div>
+    <div class="l-container">
+        <div class="l-row --wider" data-aos="fade-up">
+            <div class="js-realizacje realizacje__slick l-col13">
 
-    <div class="js-realizacje realizacje__slick">
+                {% for post in realizacjePosts %}
 
-        {% for post in realizacjePosts %}
+                    {% include 'components/article__slick.twig' %}
 
-            {% include 'components/article__slick.twig' %}
-
-        {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
     </div>
     <div class="l-container bottomAdd">
 
