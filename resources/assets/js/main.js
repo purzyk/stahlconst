@@ -70,8 +70,6 @@ $(window).on('load', () => $('.pageloader').removeClass('is-active'))
 $(window).on('load', () => $('body').removeClass('is-loading'))
 function slickify() {
     $('.js-realizacje').slick({
-        autoplay: true,
-        autoplaySpeed: 2000,
         centerMode: true,
         centerPadding: '10%',
         arrows: false,
