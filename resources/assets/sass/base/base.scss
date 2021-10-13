@@ -116,7 +116,7 @@ a {
 .cookie-banner {
   position: fixed;
   bottom: 40px;
-  right: 10%;
+
   width: 100%;
   max-width: 630px;
   padding: 35px 40px;
@@ -126,11 +126,21 @@ a {
   background-color: #eee;
 
   z-index: 10000;
+  @include breakpoint($md) {
+    right: 10%;
+  }
+
   &__border {
     border-top: 2px solid $black;
     display: flex;
-    align-content: flex-end;
+    align-content: flex-start;
     padding-top: 16px;
+    flex-direction: column;
+
+    @include breakpoint($md) {
+      align-content: flex-end;
+      flex-direction: row;
+    }
     p {
       margin-bottom: 0;
     }

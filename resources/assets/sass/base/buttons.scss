@@ -21,6 +21,6 @@
     .arrowDown {
         position: absolute;
         bottom: 20px;
-        left: -70px;
+        left: calc(-7% + 20px);
     }
 }

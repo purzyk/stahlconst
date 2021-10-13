@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <div class="home__hero__copy --mobile" id="down">
+    <div class="home__hero__copy --mobile">
         <div class="l-container">
 
             <div class="l-row" data-aos="fade-up">
@@ -30,10 +30,10 @@
             </div>
         </div>
     </div>
-    <div class="home__hero__copy" id="down">
+    <div class="home__hero__copy">
         <div class="l-container">
 
-            <div class="l-row" data-aos="fade-up">
+            <div id="down" class="l-row" data-aos="fade-up">
 
                 <div class="l-col8">
                     <div class="font38 home__hero__copy__border">
@@ -110,31 +110,33 @@
                 </div>
                 <div class="l-row referencje__bottom" data-aos="fade-up">
                     <div class="l-col8 l-off4 referencje__wrap singleOfertyBottom">
-                        <a class="referencje__next"></a>
-                        <div class="js-referencje">
-                            {% for item in post.meta('referencje') %}
-                                <div class="referencja">
-                                    <p class="font24">{{ item.tresc }}</p>
-                                    <div class="referencja__border">
-                                        <figure>
-                                            <img src="{{ Image(item.logotyp).src }}"></figure>
-                                            <div class="referencja__copy">
-                                                <div class="referencja__copy__name">
-                                                    <p class="strong">{{ item.imie_i_nazwisko }}</p>
+                        <div class="referencje__wrap__inside">
+                            <a class="referencje__next"></a>
+                            <div class="js-referencje">
+                                {% for item in post.meta('referencje') %}
+                                    <div class="referencja">
+                                        <p class="font24">{{ item.tresc }}</p>
+                                        <div class="referencja__border">
+                                            <figure>
+                                                <img src="{{ Image(item.logotyp).src }}"></figure>
+                                                <div class="referencja__copy">
+                                                    <div class="referencja__copy__name">
+                                                        <p class="strong">{{ item.imie_i_nazwisko }}</p>
+                                                    </div>
+                                                    <div class="referencja__copy__pos">
+                                                        <p>{{ item.position }},
+                                                            {{ item.company }}</p>
+                                                    </div>
                                                 </div>
-                                                <div class="referencja__copy__pos">
-                                                    <p>{{ item.position }},
-                                                        {{ item.company }}</p>
-                                                </div>
-                                            </div>
 
+                                            </div>
                                         </div>
-                                    </div>
-                                {% endfor %}
+                                    {% endfor %}
+
+                                </div>
+
 
                             </div>
-
-
                         </div>
                     </div>
                 </div>

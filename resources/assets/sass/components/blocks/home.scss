@@ -76,10 +76,6 @@
 }
 
 .wartosci {
-  margin-bottom: 26px;
-  @include breakpoint($md) {
-    margin-bottom: 0;
-  }
 }
 .wartosci__item {
   width: 100%;
@@ -192,8 +188,11 @@
 
 .wartosci {
   .l-container {
-    padding-top: 5%;
-    padding-bottom: 6%;
+    padding-bottom: 26px;
+    @include breakpoint($md) {
+      padding-top: 5%;
+      padding-bottom: 15%;
+    }
   }
   .addMargin {
     padding-bottom: 28px;
@@ -231,4 +230,8 @@
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.referencje__wrap__inside {
+  position: relative;
 }
