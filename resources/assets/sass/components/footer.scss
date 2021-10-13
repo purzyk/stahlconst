@@ -2,8 +2,10 @@
   background: $blue;
   color: $white;
 
-  @include breakpoint($md) {
-    .footer__up {
+  .footer__up {
+    padding-top: 64px;
+    padding-bottom: 26px;
+    @include breakpoint($md) {
       padding-top: 5.7%;
       padding-bottom: 0.4%;
     }
@@ -31,16 +33,18 @@
     }
   }
   &__copy {
-    @include breakpoint($md) {
-      .l-container {
+    .l-container {
+      padding-bottom: 40px;
+      @include breakpoint($md) {
         padding-top: 2%;
         padding-bottom: 0.5%;
       }
     }
   }
   &__links {
-    @include breakpoint($md) {
-      .l-container {
+    .l-container {
+      padding-bottom: 78px;
+      @include breakpoint($md) {
         padding-top: 2%;
         padding-bottom: 2%;
       }

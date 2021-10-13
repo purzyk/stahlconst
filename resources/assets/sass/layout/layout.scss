@@ -34,6 +34,12 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-column-gap: 26px;
+  .l-col5 {
+    grid-column-end: span 6;
+    @include breakpoint($md) {
+      grid-column-end: span 5;
+    }
+  }
 }
 .l-col2 {
   grid-column-end: span 4;

@@ -19,7 +19,9 @@
       border-color: $white;
     }
     &__title {
-      max-width: 50%;
+      @include breakpoint($md) {
+        max-width: 50%;
+      }
     }
   }
 }

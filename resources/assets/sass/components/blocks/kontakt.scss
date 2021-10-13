@@ -1,6 +1,9 @@
 .kontakt__tresc {
   background: $lightGrey;
+
   .l-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
     @include breakpoint($md) {
       padding-top: 10.4%;
       padding-bottom: 9%;

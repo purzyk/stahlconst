@@ -1,61 +1,61 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<article class="main-article">
-		<header class="title">
-			<div class="l-container">
+    <article class="main-article">
+        <header class="title">
+            <div class="l-container">
 
-				<div class="l-row" data-aos="fade-up">
-					<div class="l-col12 borderTop">
-						<h1>{{ post.title }}</h1>
-					</div>
-				</div>
-			</div>
-		</header>
+                <div class="l-row" data-aos="fade-up">
+                    <div class="l-col12 borderTop">
+                        <h1 class="font38_24">{{ post.title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-		<section class="kariera__tresc">
-			<div class="l-container">
+        <section class="kariera__tresc">
+            <div class="l-container">
 
-				<div class="l-row" data-aos="fade-up">
+                <div class="l-row" data-aos="fade-up">
 
 
-					<div class="l-col3">
-						<div class="kariera__tresc__left">
-							<div class="kariera__tresc__left__inside">
-								<h4 class="font16">Lokalizacja</h4>
-								<p class="font24">{{post.lokalizacja}}</p>
-							</div>
-							{% for item in post.meta('tresci_po_lewej_stronie') %}
-								<div class="kariera__tresc__left__inside">
-									<h4 class="font16">{{item.nazwa}}</h4>
-									<p class="font24">{{item.tresc}}</p>
-								</div>
-							{% endfor %}
-							<a href="" class="btn">aplikuj</a>
-						</div>
-					</div>
-					<div class="l-col8 l-off4">
-						<div class="kariera__tresc__right">
+                    <div class="l-col3">
+                        <div class="kariera__tresc__left">
+                            <div class="kariera__tresc__left__inside">
+                                <h4 class="font16">Lokalizacja</h4>
+                                <p class="font24">{{ post.lokalizacja }}</p>
+                            </div>
+                            {% for item in post.meta('tresci_po_lewej_stronie') %}
+                                <div class="kariera__tresc__left__inside">
+                                    <h4 class="font16">{{ item.nazwa }}</h4>
+                                    <p class="font24">{{ item.tresc }}</p>
+                                </div>
+                            {% endfor %}
+                            <a href="" class="btn">aplikuj</a>
+                        </div>
+                    </div>
+                    <div class="l-col8 l-off4">
+                        <div class="kariera__tresc__right">
 
-							{% for item in post.meta('opis_stanowiska') %}
-								<div class="kariera__tresc__right__inside">
-									<p class="font24 strong kariera__tresc__right__title">{{item.tytul}}</p>
-									{% for punkt in item.punkty %}
-										<p class="font16 kariera__tresc__right__punkt">{{punkt.punkt}}</p>
+                            {% for item in post.meta('opis_stanowiska') %}
+                                <div class="kariera__tresc__right__inside">
+                                    <p class="font24 strong kariera__tresc__right__title">{{ item.tytul }}</p>
+                                    {% for punkt in item.punkty %}
+                                        <p class="font16 kariera__tresc__right__punkt">{{ punkt.punkt }}</p>
 
-									{% endfor %}
-								</div>
-							{% endfor %}
+                                    {% endfor %}
+                                </div>
+                            {% endfor %}
 
-						</div>
-					</div>
-				</div>
-			</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-		</section>
-		{% include 'components/aplikuj.twig' %}
+        </section>
+        {% include 'components/aplikuj.twig' %}
 
-		{% include 'components/postsKarieraLatest.twig' %}
+        {% include 'components/postsKarieraLatest.twig' %}
 
-	</article>
+    </article>
 {% endblock %}

@@ -14,9 +14,13 @@
   }
 }
 .kariera__tresc__left {
-  .btn {
-    margin-top: 75px;
-    display: block;
+  margin-bottom: 150px;
+  @include breakpoint($md) {
+    margin-bottom: 0;
+    .btn {
+      margin-top: 75px;
+      display: block;
+    }
   }
 }
 .kariera__tresc__right__title {

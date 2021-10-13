@@ -1,26 +1,26 @@
 <article class="l-col6 realizacje__lista__post">
-	<a href="{{post.link}}">
-		{% include 'components/generic/image-widthheight.twig' with {img_src: post.thumbnail, width: 808, height:480} %}
-		<div class="l-row6">
-			<div class="l-col5">
-				<div class="realizacje__lista__posts__inside">
-					<div>
-						<p class="realizacje__lista__posts__inside__cat">{{ post.terms('category') | join(' / ') }}</p>
-						<h2 class="realizacje__lista__posts__inside__title font24">{{post.title}}</h2>
-					</div>
-					<p class="btn">zobacz</p>
+    <a href="{{ post.link }}">
+        {% include 'components/generic/image-widthheight.twig' with {img_src: post.thumbnail, width: 808, height:480} %}
+        <div class="l-row6">
+            <div class="l-col5">
+                <div class="realizacje__lista__posts__inside">
+                    <div>
+                        <p class="realizacje__lista__posts__inside__cat">{{ post.terms('category') | join(' / ') }}</p>
+                        <h2 class="realizacje__lista__posts__inside__title font2424">{{ post.title }}</h2>
+                    </div>
+                    <p class="btn">zobacz</p>
 
-				</div>
-				<div class="realizacje__lista__posts__tags">
-					<div class="singleRealizacje__tagi">
-						{% for item in post.terms('tag') %}
-							<p class="font12">#{{item}}</p>
-						{% endfor %}
+                </div>
+                <div class="realizacje__lista__posts__tags">
+                    <div class="singleRealizacje__tagi">
+                        {% for item in post.terms('tag') %}
+                            <p class="font12">#{{ item }}</p>
+                        {% endfor %}
 
 
-					</div>
-				</div>
-			</div>
-		</div>
-	</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
 </article>

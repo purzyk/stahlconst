@@ -1,111 +1,111 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="oNas">
-		<div class="oNas__header" style="background:url('{{Image(post.hero_image).src}}');">
-			<div class="l-container">
+    <div class="oNas">
+        <div class="oNas__header" style="background:url('{{ Image(post.hero_image).src }}');">
+            <div class="l-container">
 
-				<div class="l-row borderTop" data-aos="fade-up">
-					<div class="l-col8 l-off4">
-						<p class="font38">{{ post.meta('hero_tytul') }}</p>
-					</div>
-				</div>
-			</div>
-		</div>
+                <div class="l-row borderTop" data-aos="fade-up">
+                    <div class="l-col8 l-off4">
+                        <p class="font38">{{ post.meta('hero_tytul') }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="title oNas__blue">
-			<div class="l-container">
+        <div class="title oNas__blue">
+            <div class="l-container">
 
-				<div class="l-row" data-aos="fade-up">
-					<div class="l-col12 borderTop">
-						<h1 class="oNas__blue__title">{{ post.meta('tytul') }}</h1>
+                <div class="l-row" data-aos="fade-up">
+                    <div class="l-col12 borderTop">
+                        <h1 class="font38_24 oNas__blue__title">{{ post.meta('tytul') }}</h1>
 
-					</div>
-				</div>
-				<div class="l-row" data-aos="fade-up">
+                    </div>
+                </div>
+                <div class="l-row" data-aos="fade-up">
 
-					<div class="l-col8 l-off4">
-						<p class="font24">{{ post.meta('opis') }}</p>
-
-
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<div class="l-container">
+                    <div class="l-col8 l-off4">
+                        <p class="font24">{{ post.meta('opis') }}</p>
 
 
-			<div class="l-row oNas__images" data-aos="fade-up">
-				<div class="l-col6">
-					{% include 'components/generic/image-noresize.twig' with {img_src: post.image_left} %}
+                    </div>
 
-				</div>
-				<div class="l-col6">
-					{% include 'components/generic/image-noresize.twig' with {img_src: post.image_right} %}
+                </div>
+            </div>
+        </div>
 
-				</div>
-			</div>
-
-			<div class="l-row oNas__copy" data-aos="fade-up">
-
-				<div class="l-col8 l-off4">
-					<p class="font16">{{ post.meta('tresc') }}</p>
-
-				</div>
-
-			</div>
-		</div>
+        <div class="l-container">
 
 
-		{% include 'components/generic/image.twig' with {img_src: post.full_width_image, width: 1920} %}
+            <div class="l-row oNas__images" data-aos="fade-up">
+                <div class="l-col6">
+                    {% include 'components/generic/image-noresize.twig' with {img_src: post.image_left} %}
 
-		<div class="title oNas__zespol">
-			<div class="l-container ">
-				<div class="l-row oNas__zespol__title" data-aos="fade-up">
-					<div class="l-col12 borderTop">
-						<h1>{{ post.meta('zespol') }}</h1>
-					</div>
-				</div>
+                </div>
+                <div class="l-col6">
+                    {% include 'components/generic/image-noresize.twig' with {img_src: post.image_right} %}
 
+                </div>
+            </div>
 
-				<div class="l-row oNas__zespol__big" data-aos="fade-up">
+            <div class="l-row oNas__copy" data-aos="fade-up">
 
+                <div class="l-col8 l-off4">
+                    <p class="font16">{{ post.meta('tresc') }}</p>
 
-					{% for item in post.meta('osoby_ze_zdjeciami') %}
-						<div class="l-col4 oNas__zespol__item">
-							{% include 'components/generic/image-noresize.twig' with {img_src: item.zdjecie} %}
-							<div class="l-row4">
-								<div class="l-col3 oNas__zespol__border">
-									<h4 class="font24 strong">{{item.imie_i_nazwisko}}</h4>
-									<h5 class="font24 oNas__zespol__stanowisko">{{item.stanowisko}}</h5>
-									<p>{{item.opis}}</p>
-								</div>
-							</div>
-						</div>
-					{% endfor %}
+                </div>
+
+            </div>
+        </div>
 
 
-				</div>
+        {% include 'components/generic/image.twig' with {img_src: post.full_width_image, width: 1920} %}
 
-				<div class="l-row" data-aos="fade-up">
+        <div class="title oNas__zespol">
+            <div class="l-container ">
+                <div class="l-row oNas__zespol__title" data-aos="fade-up">
+                    <div class="l-col12 borderTop">
+                        <h2 class="font38_24">{{ post.meta('zespol') }}</h2>
+                    </div>
+                </div>
 
-					{% for item in post.meta('osoby_bez_zdjec') %}
-						<div class="l-col3 oNas__zespol__item">
-							<div class="oNas__zespol__border">
-								<h4 class="font24 strong">{{item.imie_i_nazwisko}}</h4>
-								<h5 class="font24 oNas__zespol__stanowisko">{{item.stanowisko}}</h5>
-								<p>{{item.opis}}</p>
-							</div>
-						</div>
-					{% endfor %}
-				</div>
-			</div>
 
-		</div>
-	</div>
-	{% include 'components/skontaktuj.twig' %}
+                <div class="l-row oNas__zespol__big" data-aos="fade-up">
 
-	<!-- /content-wrapper -->
+
+                    {% for item in post.meta('osoby_ze_zdjeciami') %}
+                        <div class="l-col4 oNas__zespol__item">
+                            {% include 'components/generic/image-noresize.twig' with {img_src: item.zdjecie} %}
+                            <div class="l-row4">
+                                <div class="l-col3 oNas__zespol__border">
+                                    <h4 class="font24 strong">{{ item.imie_i_nazwisko }}</h4>
+                                    <h5 class="font24 oNas__zespol__stanowisko">{{ item.stanowisko }}</h5>
+                                    <p>{{ item.opis }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+
+                </div>
+
+                <div class="l-row" data-aos="fade-up">
+
+                    {% for item in post.meta('osoby_bez_zdjec') %}
+                        <div class="l-col3 oNas__zespol__item">
+                            <div class="oNas__zespol__border">
+                                <h4 class="font24 strong">{{ item.imie_i_nazwisko }}</h4>
+                                <h5 class="font24 oNas__zespol__stanowisko">{{ item.stanowisko }}</h5>
+                                <p>{{ item.opis }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% include 'components/skontaktuj.twig' %}
+
+    <!-- /content-wrapper -->
 {% endblock %}
