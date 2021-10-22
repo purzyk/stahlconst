@@ -9,10 +9,10 @@
 }
 
 .arrowDown {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     display: inline-block;
-    background: url("../images/arrow_down.svg") center no-repeat;
+    background: url("../images/arrow_down.svg") center/cover no-repeat;
 }
 
 .arrowDown__wrap {

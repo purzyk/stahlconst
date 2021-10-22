@@ -44,13 +44,16 @@
 
 .posts__kariera {
   .l-container {
-    margin-top: 6%;
+    margin-top: 4.5%;
     margin-bottom: 4.5%;
   }
 }
 
 .posts__kariera__item {
   margin-bottom: 72px;
+  &:first-child {
+    margin-top: 72px;
+  }
 
   a {
     display: flex;

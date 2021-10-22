@@ -23,15 +23,22 @@
     p {
       color: #8394a7;
       margin-right: 30px;
+      margin-bottom: 0;
     }
   }
   .zdjecie_tekst {
     .zdjecie_tekst__copy {
-      order: 2;
+      order: 0;
       margin-top: 20px;
       @include breakpoint($md) {
         order: initial;
         margin-top: 0;
+      }
+    }
+    .zdjecie_tekst__img {
+      order: 1;
+      @include breakpoint($md) {
+        order: initial;
       }
     }
     &.szary {
@@ -101,20 +108,19 @@
 .realizacje__lista__post {
   margin-bottom: 34px;
   @include breakpoint($md) {
-    margin-bottom: 14%;
+    margin-bottom: 6vw;
   }
 }
 
 .pagination {
-  margin-bottom: 20px;
+  margin-bottom: 34px;
   @include breakpoint($md) {
-    margin-bottom: 8%;
+    margin-bottom: 6vw;
   }
 }
 
 .realizacje__lista__posts {
   @include breakpoint($md) {
-    padding-bottom: 8%;
   }
 }
 
@@ -156,7 +162,9 @@
 .realizacje__lista__kategorii__search {
   input {
     font-family: "IBM Plex Mono", monospace;
-
+    border-radius: 0 !important;
+    border: 0;
+    border-bottom: 2px solid $black;
     &::placeholder {
       color: #dddddd;
     }
@@ -255,6 +263,24 @@
           }
         }
       }
+    }
+  }
+}
+
+.wszystkie__btn {
+  text-align: right;
+  span {
+    text-decoration: underline;
+  }
+  &__mobile {
+    @include breakpoint($md) {
+      display: none;
+    }
+  }
+  &__desktop {
+    display: none;
+    @include breakpoint($md) {
+      display: inline-block;
     }
   }
 }

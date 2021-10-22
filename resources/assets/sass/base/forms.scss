@@ -86,6 +86,8 @@ $checkHeigh: 24px;
         line-height: 3.2rem;
         background: transparent;
         width: 100%;
+        border-radius: 0 !important;
+        border: 0;
         border-bottom: 2px solid $black;
         margin-bottom: 8px;
         padding: 5px 0 5px;
@@ -95,6 +97,7 @@ $checkHeigh: 24px;
         }
         &::placeholder {
             color: $white;
+            font-family: "IBM Plex Mono", monospace;
         }
         &.valid {
             background: url("../images/valid.svg") top 20px right no-repeat;
@@ -105,7 +108,10 @@ $checkHeigh: 24px;
     }
     textarea {
         border-top: 2px solid $black;
-        max-height: 190px;
+        max-height: 142px;
+        @include breakpoint($md) {
+            max-height: 190px;
+        }
     }
     .wpcf7-submit {
         width: initial;
@@ -114,6 +120,7 @@ $checkHeigh: 24px;
         border: 0;
         text-decoration: underline;
         text-transform: lowercase;
+        font-family: "IBM Plex Mono", monospace;
     }
     label {
         display: flex;
@@ -241,5 +248,44 @@ $checkHeigh: 24px;
         label input[type="checkbox"]:checked + span::after {
             background: url("../images/check_white_checked.svg") left top no-repeat;
         }
+    }
+}
+
+.uploadfieldtrick #fileuploadfield {
+    display: none;
+}
+
+.uploadfieldtrick #uploadbrowsebutton {
+    display: none;
+}
+
+.form__row__file {
+    br {
+        display: none;
+    }
+}
+
+#uploadCV {
+    background: none;
+    font-family: "IBM Plex Mono", monospace;
+
+    font-size: 2rem;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    line-height: 3.2rem;
+    background: transparent;
+    width: 100%;
+
+    margin-bottom: 0;
+    color: #fff;
+    padding: 5px 0 5px;
+    @include breakpoint($md) {
+        font-size: 2.4rem;
+        line-height: 4rem;
+    }
+    &::placeholder {
+        color: $white;
+        font-family: "IBM Plex Mono", monospace;
     }
 }

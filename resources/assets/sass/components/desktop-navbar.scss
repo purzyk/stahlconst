@@ -55,11 +55,14 @@
                 color: $white;
                 text-transform: lowercase;
                 display: block;
-                padding: 14px 30px;
+                padding: 14px 15px;
                 font-size: 16px;
                 line-height: 26px;
                 text-decoration: none;
                 transition: all 0.15s ease-in-out;
+                @include breakpoint($lg) {
+                    padding: 14px 30px;
+                }
             }
         }
 

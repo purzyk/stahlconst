@@ -6,7 +6,9 @@
         <div class="home__hero__inside">
             <div class="l-container --desktop">
                 <div class="l-col1 arrowDown__wraper">
-                    <a href="#down" class="arrowDown"></a>
+                    <div class="arrowDown__wraper__inside">
+                        <a href="#down" class="arrowDown"></a>
+                    </div>
                 </div>
                 <div class="l-row home__hero__row">
 
@@ -41,7 +43,7 @@
                     <div class="font38 ">
                         {{ post.meta('hero_copy') }}
                     </div>
-                    <a href="" class="btn">więcej</a>
+                    <a href="{{ site.link }}/o-nas" class="btn">więcej</a>
                 </div>
 
             </div>
@@ -64,7 +66,7 @@
 
                     {% for item in post.meta('lista_ofert') %}
                         <div class="oferta__lista__item l-col3">
-                            <a href="{{ item.link.url }}" class="btn">
+                            <a href="{{ item.link.link }}" class="btn">
                                 <figure>
                                     <img src="{{ Image(item.ikona).src }}"></figure>
                                     <div class="oferta__lista__item__border">

@@ -66,12 +66,30 @@ $("#ToTop").click(function () {
     return false;
 });
 
+(function ($) { /*Brought click function of fileupload button when text field is clicked*/
+    $("#uploadtextfield").click(function () {
+        $('#fileuploadfield').click()
+    });
+
+    /*Brought click function of fileupload button when browse button is clicked*/
+    $("#uploadbrowsebutton").click(function () {
+        $('#fileuploadfield').click()
+    });
+
+    /*To bring the selected file value in text field*/
+    $('#fileuploadfield').change(function () {
+        let file = $("#fileuploadfield")[0].files[0];
+        $('#uploadCV').val(file.name);
+    });
+
+})(jQuery);
+
 $(window).on('load', () => $('.pageloader').removeClass('is-active'))
 $(window).on('load', () => $('body').removeClass('is-loading'))
 function slickify() {
     $('.js-realizacje').slick({
-                arrows: false,
-                variableWidth: true,
+        arrows: false,
+        variableWidth: true,
         slidesToShow: 2,
         responsive: [
             {
@@ -82,8 +100,6 @@ function slickify() {
     })
 
     $('.js-referencje').slick({
-        autoplay: true,
-        autoplaySpeed: 2000,
         arrows: true,
         slidesToShow: 1,
         nextArrow: $('.referencje__next'),

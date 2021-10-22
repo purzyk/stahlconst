@@ -51,7 +51,7 @@
     }
     &__lang {
       display: flex;
-      margin-bottom: 95px;
+      margin-bottom: 5vh;
       @include breakpoint($md) {
         margin-bottom: 0;
       }

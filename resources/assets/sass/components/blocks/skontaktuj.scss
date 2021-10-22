@@ -14,6 +14,9 @@
       margin-bottom: 0;
     }
   }
+  .title {
+    padding-bottom: 35px;
+  }
 }
 .skontaktuj__bottom {
   @include breakpoint($md) {
