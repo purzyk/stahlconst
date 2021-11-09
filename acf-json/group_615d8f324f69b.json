@@ -151,6 +151,33 @@
             ]
         },
         {
+            "key": "field_618a5efa7214a",
+            "label": "lista realizacji",
+            "name": "lista_realizacji",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "realizacje"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": 3,
+            "max": "",
+            "return_format": "object"
+        },
+        {
             "key": "field_615d8fa47d656",
             "label": "Wartości tytuł",
             "name": "wartosci_tytul",
@@ -386,5 +413,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633604731
+    "modified": 1636458265
 }

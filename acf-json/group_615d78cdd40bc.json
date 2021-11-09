@@ -139,6 +139,25 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_618a64035bcfe",
+            "label": "map shortcode",
+            "name": "map_shortcode",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -158,5 +177,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633516178
+    "modified": 1636459537
 }

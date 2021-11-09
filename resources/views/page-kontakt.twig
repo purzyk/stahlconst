@@ -27,7 +27,23 @@
 				</div>
 			</div>
 		</section>
-		{% include 'components/generic/image.twig' with {img_src: post.zdjecie, width: 1920} %}
+		<section class="kontakt__zdjecia">
+
+			<div class="kontakt__zdjecia__row" data-aos="fade-up">
+
+				<div class="kontakt__zdjecia__mapa">
+					{% filter shortcodes|raw %}
+						{{post.map_shortcode}}
+					{% endfilter %}
+				</div>
+				<div class="kontakt__zdjecia__zdjecie">
+					{% include 'components/generic/image-widthheight.twig' with {img_src: post.zdjecie, width: 960, height:800} %}
+				</div>
+
+			</div>
+
+		</section>
+
 	</main>
 	<!-- /content-wrapper -->
 {% endblock %}

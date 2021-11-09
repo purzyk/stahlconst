@@ -89,6 +89,7 @@
     height: 100%;
 
     max-height: 40px;
+    transition: 0.2s all;
 
     @include breakpoint($md) {
       max-height: 57px;
@@ -112,7 +113,7 @@
 
   &.smaller {
 
-    box-shadow: 5px 8px 90px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 
 
     &.open {
@@ -136,6 +137,10 @@
       @include breakpoint($md) {
         height: 70px;
       }
+    }
+
+    .header__logo {
+      height: 30px;
     }
   }
 }

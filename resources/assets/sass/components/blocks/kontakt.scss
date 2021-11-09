@@ -4,23 +4,73 @@
   .l-container {
     padding-top: 50px;
     padding-bottom: 50px;
+
     @include breakpoint($md) {
       padding-top: 10.4%;
       padding-bottom: 9%;
     }
   }
+
   &__kolumna {
     border-top: 2px solid $black;
     padding-top: 56px;
   }
+
   &__title {
     margin-bottom: 35px;
   }
 }
+
 .kontakt__tresc__lewa {
   display: flex;
   justify-content: space-between;
 }
+
 .kontakt__tresc__smaller {
   margin-bottom: 6px;
+}
+
+
+.kontakt__zdjecia {
+  &__row {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($md) {
+      flex-direction: row;
+    }
+  }
+
+  &__mapa {
+    width: 100%;
+
+    height: 500px;
+
+    @include breakpoint($md) {
+      width: 50%;
+      height: initial;
+    }
+
+    .wpgmp_map {
+      height: 100% !important;
+    }
+
+    .wpgmp_map_parent {
+      height: 100%;
+      margin-bottom: 0;
+
+    }
+
+    .wpgmp_map_container {
+      height: 100%;
+    }
+  }
+
+  &__zdjecie {
+    width: 100%;
+
+    @include breakpoint($md) {
+      width: 50%;
+    }
+  }
 }

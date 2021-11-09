@@ -86,7 +86,7 @@ $("#ToTop").click(function () {
 
 $(window).on('load', () => $('.pageloader').removeClass('is-active'))
 $(window).on('load', () => $('body').removeClass('is-loading'))
-function slickify() {
+
     $('.js-realizacje').slick({
         arrows: false,
         variableWidth: true,
@@ -110,11 +110,8 @@ function slickify() {
             }
         ]
     })
-}
-slickify();
-$(window).resize(function () {
-    slickify();
-});
+
+
 
 AOS.init({once: true})
 
