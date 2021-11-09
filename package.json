@@ -9,6 +9,9 @@
     "prod": "cross-env NODE_ENV=production webpack --config build/webpack.config.js --progress --mode production"
   },
   "keywords": [],
+  "browser": {
+    "[module-name]": false
+  },
   "author": "Toni Suomalainen",
   "license": "MIT",
   "devDependencies": {
@@ -17,8 +20,8 @@
     "@babel/preset-env": "^7.13.12",
     "aos": "^2.3.4",
     "babel-loader": "^8.2.2",
-    "browser-sync": "^2.27.5",
-    "browser-sync-webpack-plugin": "^2.3.0",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^8.1.0",
     "cross-env": "^7.0.3",
@@ -33,11 +36,8 @@
     "eslint-webpack-plugin": "^2.1.0",
     "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.4.0",
-    "node-sass": "^5.0.0",
     "postcss-loader": "^5.2.0",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.1.2",
-    "prettier-webpack-plugin": "^1.2.0",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.28.0",
@@ -52,7 +52,9 @@
     "image-webpack-loader": "^8.0.1",
     "jquery": "^3.4.1",
     "magnific-popup": "^1.1.0",
+    "node-sass": "^6.0.1",
     "slick-carousel": "^1.8.1",
+    "swiper": "^7.0.8",
     "url-loader": "^4.1.1",
     "vanilla-lazyload": "^17.5.0",
     "webpack-fix-style-only-entries": "^0.6.1",

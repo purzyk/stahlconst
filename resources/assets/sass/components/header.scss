@@ -10,24 +10,31 @@
       -webkit-overflow-scrolling: touch; // mobile safari
     }
   }
+
   &__top {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
+    transition: all 0.2s;
+
     @include breakpoint($md) {
       height: 140px;
 
       justify-content: space-between;
     }
   }
+
   &__socials {
     display: none;
+
     @include breakpoint($md) {
       display: flex;
     }
+
     &__socials {
       display: flex;
+
       @include breakpoint($md) {
         margin-left: 12px;
       }
@@ -35,32 +42,39 @@
       a {
         margin-right: 56px;
         display: inline-block;
+
         @include breakpoint($md) {
           margin-left: 24px;
           margin-right: 0;
         }
+
         img {
           display: block;
           max-width: inherit;
           height: 32px;
+
           @include breakpoint($md) {
             height: inherit;
           }
         }
       }
     }
+
     &__lang {
       display: flex;
       margin-bottom: 5vh;
+
       @include breakpoint($md) {
         margin-bottom: 0;
       }
+
       &__item {
         font-size: 2rem;
         line-height: 3.2rem;
         color: $lightGrey;
         margin-right: 25px;
         display: inline-block;
+
         @include breakpoint($md) {
           font-size: 1.2rem;
           line-height: 2.6rem;
@@ -75,6 +89,7 @@
     height: 100%;
 
     max-height: 40px;
+
     @include breakpoint($md) {
       max-height: 57px;
     }
@@ -96,24 +111,9 @@
   }
 
   &.smaller {
-    /*
-    box-shadow: 5px 8px 90px rgba(0, 0, 0, 0.2);
 
-    .header__wrapper {
-      height: $headerSMFixedHeight;
+    box-shadow: 5px 8px 90px rgba(0, 0, 0, 0.5);
 
-      @include breakpoint($md) {
-        height: $headerMDFixedHeight;
-      }
-    }
-
-    .header__logo img {
-      height: 100%;
-
-      @include breakpoint($md) {
-        height: 100%;
-      }
-    }
 
     &.open {
       height: 100vh;
@@ -128,10 +128,19 @@
         }
       }
     }
-    */
+
+    .header__top {
+
+      height: 80px;
+
+      @include breakpoint($md) {
+        height: 70px;
+      }
+    }
   }
 }
-/*
+
+
 .is-sticky {
   position: fixed;
   z-index: 10;
@@ -139,7 +148,11 @@
 
 .smaller {
   padding-bottom: 0;
-}*/
+}
+
+main {
+  padding-top: 140px;
+}
 
 .header__mobileArea {
   display: none;

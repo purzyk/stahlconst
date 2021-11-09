@@ -13,7 +13,7 @@
 				</div>
 				<div class="realizacje__lista__posts__tags">
 					<div class="singleRealizacje__tagi">
-						{% for item in post.terms('tag') %}
+						{% for item in post.terms('tagi_realizacji') %}
 							<p class="font12">#{{item}}</p>
 						{% endfor %}
 

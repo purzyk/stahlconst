@@ -162,7 +162,9 @@ module.exports = {
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
+      https: true,
       proxy: config.devUrl, // YOUR DEV-SERVER URL
+      host:'192.168.1.127',
       files: [
         './*.php',
         './resources/views/**/*.twig',

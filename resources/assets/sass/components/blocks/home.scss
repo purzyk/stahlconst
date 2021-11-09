@@ -3,9 +3,11 @@
   background-size: cover !important;
   position: relative;
   background-position: top center !important;
+
   @include breakpoint($md) {
     height: 100vh;
   }
+
   &__inside {
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
@@ -13,33 +15,41 @@
     left: 0;
     right: 0;
     bottom: 0;
+
     .--desktop {
       display: none;
+
       @include breakpoint($md) {
         display: grid;
         align-items: flex-end;
         height: 100%;
-        padding-bottom: 40vh;
+        padding-bottom: 20vh;
       }
     }
   }
 }
+
 .home__hero__row {
   color: $white;
+
   h1 {
     border-top: 8px solid $white;
     padding-top: 40px;
   }
 }
+
 .home__hero__copy {
   background: #8394a7;
   color: $white;
+
   &.--mobile {
     display: block;
+
     .l-container {
       padding-top: 70px;
       padding-bottom: 83px;
     }
+
     @include breakpoint($md) {
       display: none;
     }
@@ -49,10 +59,12 @@
     color: $white;
   }
 }
+
 .home__hero__copy__border {
   border-top: 4px solid $white;
   padding-top: 36px;
   margin-top: 10px;
+
   @include breakpoint($md) {
     margin-top: 0;
     padding-top: 5%;
@@ -61,6 +73,7 @@
   p {
     font-size: 2.4rem;
     line-height: 3.6rem;
+
     @include breakpoint($md) {
       font-size: 3.8rem;
       line-height: 5rem;
@@ -72,64 +85,78 @@
   background-color: #f5f5f5;
   padding-bottom: 10px;
   padding-top: 50px;
+
   @include breakpoint($md) {
     padding-top: 0;
   }
 }
 
-.wartosci {
-}
+.wartosci {}
+
 .wartosci__item {
   width: 100%;
   margin-bottom: 40px;
+
   @include breakpoint($md) {
     width: 19%;
     margin-bottom: 0;
   }
+
   &__number {
     color: #8394a7;
     font-weight: 300;
   }
 }
+
 .wartosci__items {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: column;
+
   @include breakpoint($md) {
     flex-direction: row;
   }
 }
+
 .wartosci__item__copy {
   border-top: 2px solid $black;
   margin-top: 10px;
   padding-top: 19px;
 }
+
 .referencje {
   overflow: hidden;
 }
+
 .referencja {
   padding-right: 20%;
   min-width: 90%;
+
   @include breakpoint($md) {
     min-width: initial;
   }
 }
+
 .referencja__border {
   border-top: 2px solid $black;
   margin-top: 54px;
   padding-top: 18px;
   display: flex;
   justify-content: flex-start;
+
   figure {
     max-height: 70px;
     margin-right: 36px;
+
     img {
       max-height: 70px;
     }
   }
+
   .referencja__copy {
     align-self: center;
+
     p {
       margin-bottom: 0;
     }
@@ -151,27 +178,33 @@
   display: block;
   background: url("../images/next.svg") center no-repeat;
   display: none;
+
   @include breakpoint($md) {
     display: block;
   }
 }
+
 .js-referencje {
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
   overflow-x: scroll;
+
   @include breakpoint($md) {
     display: block;
     overflow-x: auto;
   }
 }
+
 .home__hero__copy {
   .l-container {
     padding-top: 5%;
     padding-bottom: 9%;
+
     .btn {
       margin-top: 34px;
       display: block;
+
       @include breakpoint($md) {
         margin-top: 52px;
       }
@@ -179,8 +212,7 @@
   }
 }
 
-.home__hero__copy__border {
-}
+.home__hero__copy__border {}
 
 .home__oferta {
   .l-container {
@@ -191,18 +223,22 @@
 .wartosci {
   .l-container {
     padding-bottom: 26px;
+
     @include breakpoint($md) {
       padding-top: 5%;
       padding-bottom: 15%;
     }
   }
+
   .addMargin {
     padding-bottom: 28px;
+
     @include breakpoint($md) {
       padding-bottom: 10%;
     }
   }
 }
+
 .wartosci__item__number {
   margin-bottom: 33px;
 
@@ -216,9 +252,11 @@
     padding-bottom: 8.5%;
     position: relative;
   }
+
   .referencje__bottom {
     position: relative;
     width: calc(100vw - 12%);
+
     @include breakpoint($md) {
       width: initial;
     }
@@ -229,12 +267,12 @@
   position: relative;
 }
 
-.arrowDown__wraper {
-}
+.arrowDown__wraper {}
 
 .arrowDown__wraper {
   position: relative;
 }
+
 .arrowDown__wraper__inside {
   position: absolute;
   left: 0;
