@@ -1,4 +1,5 @@
 $checkHeigh: 24px;
+
 .wpcf7-acceptance {
     .wpcf7-list-item-label {
         display: block;
@@ -53,7 +54,7 @@ $checkHeigh: 24px;
         margin-bottom: 0;
     }
 
-    label input[type="checkbox"]:checked + span::after {
+    label input[type="checkbox"]:checked+span::after {
         background: url("../images/checkbox_checked.svg") left top no-repeat;
         background-size: $checkHeigh;
         top: 0;
@@ -65,16 +66,28 @@ $checkHeigh: 24px;
     justify-content: space-between;
 
     flex-direction: column;
+
     @include breakpoint($md) {
         margin-bottom: 58px;
         flex-direction: row;
     }
+
     label {
+        p {
+            font-size: 1.4rem;
+
+            @include breakpoint($md) {
+                font-size: 1.2rem;
+            }
+        }
+
         font-size: 1.4rem;
+
         @include breakpoint($md) {
             font-size: 1.2rem;
         }
     }
+
     input,
     textarea {
         font-family: "IBM Plex Mono", monospace;
@@ -91,28 +104,35 @@ $checkHeigh: 24px;
         border-bottom: 2px solid $black;
         margin-bottom: 8px;
         padding: 5px 0 5px;
+
         @include breakpoint($md) {
             font-size: 2.4rem;
             line-height: 4rem;
         }
+
         &::placeholder {
             color: $white;
             font-family: "IBM Plex Mono", monospace;
         }
+
         &.valid {
             background: url("../images/valid.svg") top 20px right no-repeat;
         }
+
         &.error {
             color: red;
         }
     }
+
     textarea {
         border-top: 2px solid $black;
         max-height: 142px;
+
         @include breakpoint($md) {
             max-height: 190px;
         }
     }
+
     .wpcf7-submit {
         width: initial;
         font-size: 16px;
@@ -122,11 +142,13 @@ $checkHeigh: 24px;
         text-transform: lowercase;
         font-family: "IBM Plex Mono", monospace;
     }
+
     label {
         display: flex;
         flex-direction: column;
     }
 }
+
 .form__row__50 {
     width: 100%;
     margin-bottom: 33px;
@@ -136,21 +158,26 @@ $checkHeigh: 24px;
         margin-bottom: 0;
     }
 }
+
 .form__row__100 {
     width: 100%;
     margin-bottom: 33px;
+
     @include breakpoint($md) {
         margin-bottom: 0;
     }
 }
+
 .form__row__submit {
     position: relative;
+
     .wpcf7-submit {
         position: absolute;
         right: 0;
         bottom: 0;
         cursor: pointer;
     }
+
     .ajax-loader {
         position: absolute;
     }
@@ -169,25 +196,30 @@ $checkHeigh: 24px;
     .wpcf7-response-output {
         display: none;
     }
+
     .form__response {
         h4 {
             font-size: 3.8rem;
             line-height: 5rem;
             margin-bottom: 32px;
         }
+
         p {
             font-size: 2.4rem;
             line-height: 4rem;
         }
     }
+
     &.sent {
         .form__main {
             display: none;
         }
+
         .form__response {
             display: block;
         }
     }
+
     .form__response {
         display: none;
     }
@@ -195,6 +227,7 @@ $checkHeigh: 24px;
 
 .white {
     .form__row {
+
         input,
         textarea {
             &::placeholder {
@@ -203,32 +236,41 @@ $checkHeigh: 24px;
         }
     }
 }
+
 .blue {
     .wpcf7-submit {
         color: $white;
     }
+
     .borderTop {
         border-color: $white;
     }
+
     .font38_24,
     p {
         color: $white;
     }
+
     .form__row label {
         color: $white;
     }
+
     .form__row input,
     .form__row textarea {
         border-color: $white;
     }
+
     &.skontaktuj {
         background-color: #8394a7;
+
         .title .l-container {
             padding-bottom: 7%;
             padding-top: 5.5%;
         }
     }
+
     .form__row {
+
         input,
         textarea {
             &::placeholder {
@@ -236,6 +278,7 @@ $checkHeigh: 24px;
             }
         }
     }
+
     .wpcf7-acceptance {
         label span::before {
             background: url("../images/check_white.svg") left top no-repeat;
@@ -245,7 +288,7 @@ $checkHeigh: 24px;
             background: url("../images/check_white.svg") left top no-repeat;
         }
 
-        label input[type="checkbox"]:checked + span::after {
+        label input[type="checkbox"]:checked+span::after {
             background: url("../images/check_white_checked.svg") left top no-repeat;
         }
     }
@@ -280,10 +323,12 @@ $checkHeigh: 24px;
     margin-bottom: 0;
     color: #fff;
     padding: 5px 0 5px;
+
     @include breakpoint($md) {
         font-size: 2.4rem;
         line-height: 4rem;
     }
+
     &::placeholder {
         color: $white;
         font-family: "IBM Plex Mono", monospace;

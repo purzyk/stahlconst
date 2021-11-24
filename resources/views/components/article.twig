@@ -1,8 +1,10 @@
 <article class="l-col6 realizacje__lista__post">
 	<a href="{{post.link}}">
 		{% include 'components/generic/image-widthheight.twig' with {img_src: post.thumbnail, width: 808, height:480} %}
-		<div class="l-row6">
-			<div class="l-col5">
+	</a>
+	<div class="l-row6">
+		<div class="l-col5">
+			<a href="{{post.link}}">
 				<div class="realizacje__lista__posts__inside">
 					<div>
 						<p class="realizacje__lista__posts__inside__cat">{{ post.terms('category') | join(' / ') }}</p>
@@ -11,16 +13,18 @@
 					<p class="btn">zobacz</p>
 
 				</div>
-				<div class="realizacje__lista__posts__tags">
-					<div class="singleRealizacje__tagi">
-						{% for item in post.terms('tagi_realizacji') %}
-							<p class="font12">#{{item}}</p>
-						{% endfor %}
+			</a>
+
+			<div class="realizacje__lista__posts__tags">
+				<div class="singleRealizacje__tagi">
+					{% for item in post.terms('tagi_realizacji') %}
+						<a href="{{ site.link }}/tagi_realizacji/{{item.slug}}" class="font12 noBreak">#{{item.name}}</a>
+					{% endfor %}
 
 
-					</div>
 				</div>
 			</div>
 		</div>
-	</a>
+	</div>
+
 </article>

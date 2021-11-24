@@ -1,0 +1,27 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<div class="l-container archiveMain">
+		<div class="l-row realizacje__kat" data-aos="fade-up">
+			<div class="l-col12  borderTop --px2">
+				<h1 class="font38_24">#{{title}}</h1>
+			</div>
+		</div>
+
+
+		<div class="l-row realizacje__lista__posts" data-aos="fade-up">
+
+			{% for post in posts %}
+
+				{% include 'components/article.twig' %}
+
+			{% endfor %}
+		</div>
+	</div>
+	{% if posts.pagination.pages %}
+		{% include 'components/pagination.twig' %}
+	{% endif %}
+	{% include 'components/skontaktuj.twig' %}
+
+{% endblock %}

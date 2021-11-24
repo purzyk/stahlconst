@@ -1,40 +1,57 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    {% if posts is not empty %}
-        <header class="title ">
-            <div class="l-container">
-                <div class="l-row" data-aos="fade-up">
-                    <div class="l-col12 borderTop">
-                        <div class="l-row noPaddings">
-                            <div class="l-col12">
-                                <h1 class="title is-1">Wynik wyszukiwania dla:
-                                    {{ title }}</h1>
-                            </div>
-                        </div>
-                    </div>
+	{% if posts is not empty %}
+		<header class="title ">
+			<div class="l-container">
+				<div class="l-row" data-aos="fade-up">
+					<div class="l-col12 borderTop">
+						<div class="l-row noPaddings">
+							<div class="l-col12">
+								<h1 class="title is-1">Wynik wyszukiwania dla:
+									{{ title }}</h1>
+							</div>
+						</div>
+					</div>
 
-                </div>
-            </div>
+				</div>
+			</div>
 
-        </header>
-        <div class="l-container">
+		</header>
+		<div class="l-container">
 
-            <div class="l-row realizacje__lista__posts">
+			<div class="l-row realizacje__lista__posts">
 
-                {% for post in posts %}
+				{% for post in posts %}
 
-                    {% include 'components/article.twig' %}
+					{% include 'components/article.twig' %}
 
-                {% endfor %}
-            </div>
-        </div>
-        {% if posts.pagination.pages %}
-            {% include 'components/pagination.twig' %}
-        {% endif %}
-        {% include 'components/skontaktuj.twig' %}
-    {% else %}
-        <h1 class="title is-2">{{ messages.search.no_results }}</h1>
+				{% endfor %}
+			</div>
+		</div>
+		{% if posts.pagination.pages %}
+			{% include 'components/pagination.twig' %}
+		{% endif %}
+		{% include 'components/skontaktuj.twig' %}
+	{% else %}
+		<header class="title ">
+			<div class="l-container">
+				<div class="l-row" data-aos="fade-up">
+					<div class="l-col12 borderTop">
+						<div class="l-row noPaddings">
+							<div class="l-col12">
+								<h1 class="title is-1">Brak wyników</h1>
+							</div>
+						</div>
+					</div>
 
-    {% endif %}
+				</div>
+			</div>
+
+		</header>
+
+		{% include 'components/realizacje.twig' %}
+		{% include 'components/skontaktuj.twig' %}
+
+	{% endif %}
 {% endblock %}

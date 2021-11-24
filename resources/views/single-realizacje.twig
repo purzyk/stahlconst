@@ -7,8 +7,9 @@
 
 				<div class="l-row" data-aos="fade-up">
 					<div class="l-col12 singleRealizacje__cat">
-						{% for item in post.terms('category') %}
-							<p class="font24 strong">{{ item }}</p>
+						{% for item in post.terms('kategorie_realizacji') %}
+
+							<a href="{{ site.link }}/kategorie_realizacji/{{item.slug}}" class="font24 strong noBreak">{{ item.name }}</a>
 						{% endfor %}
 					</div>
 					<div class="l-col12 borderTop">
@@ -22,7 +23,7 @@
 						<p class="font24">{{ post.meta('opis') }}</p>
 						<div class="singleRealizacje__tagi">
 							{% for item in post.terms('tagi_realizacji') %}
-								<p class="font12">#{{ item }}</p>
+								<a href="{{ site.link }}/tagi_realizacji/{{item.slug}}" class="font12 noBreak">#{{ item.name }}</a>
 							{% endfor %}
 						</div>
 					</div>

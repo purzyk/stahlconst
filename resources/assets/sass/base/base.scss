@@ -97,16 +97,17 @@ a {
 .borderTop {
   border-top: 4px solid $black;
   padding-top: 36px;
+
   @include breakpoint($md) {
     padding-top: 3.7% !important;
   }
+
   &.--px2 {
     border-top: 2px solid $black;
   }
 }
 
-.addMargin {
-}
+.addMargin {}
 
 .displayFlex {
   display: flex;
@@ -126,6 +127,7 @@ a {
   background-color: #eee;
 
   z-index: 10000;
+
   @include breakpoint($md) {
     right: 10%;
   }
@@ -141,17 +143,21 @@ a {
       align-content: flex-end;
       flex-direction: row;
     }
+
     p {
       margin-bottom: 0;
     }
+
     .btn {
       margin-top: auto;
       cursor: pointer;
     }
+
     h3 {
       margin-bottom: 10px;
     }
   }
+
   &__wrap {
     display: flex;
     flex-direction: column;
@@ -180,4 +186,50 @@ a {
     -ms-animation: none !important;
     animation: none !important;
   }
+}
+
+
+.hoverline {
+
+
+  span {
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #000;
+      transition: width 0.3s;
+    }
+  }
+
+  &:hover,
+  &.current-menu-item {
+    span {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+
+
+}
+
+.hoverline_white {
+  span {
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      background: #fff;
+    }
+  }
+}
+
+.noBreak {
+  white-space: nowrap;
 }

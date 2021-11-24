@@ -3,9 +3,9 @@
     //padding-top: 200px;
     background: $grey;
 
-    .borderTop {
-    }
+    .borderTop {}
   }
+
   &__tresc {
     background-color: $lightGrey;
 
@@ -13,26 +13,64 @@
     ul li {
       font-size: 2rem;
       line-height: 3.2rem;
+
       @include breakpoint($md) {
         font-size: 2.4rem;
         line-height: 4rem;
       }
     }
+
     p {
       margin-bottom: 10px;
+
       @include breakpoint($md) {
         margin-bottom: 30px;
       }
     }
+
     ul {
       margin-bottom: 20px;
-      border-bottom: 2px solid $black;
-      li {
+
+      //
+      >li {
+        border-bottom: 2px solid $black;
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+
+
+        /*
         border-top: 2px solid $black;
-        margin-left: 7vw;
+        
         padding-top: 16px;
         margin-bottom: 13px;
+        */
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        ul {
+          margin-left: 7vw;
+          margin-top: 32px;
+          //margin-bottom: 32px;
+          padding-bottom: 0;
+        }
+
+        ul li {
+          padding: 32px 0;
+          margin-bottom: 0;
+
+
+          &:first-child {
+            border-top: 2px solid $black;
+          }
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
       }
+
+      /*
       @include breakpoint($md) {
         margin-bottom: 40px;
 
@@ -42,7 +80,9 @@
           margin-bottom: 33px;
         }
       }
+      */
     }
+
     strong {
       font-weight: 700;
       margin-bottom: 20px;
@@ -53,8 +93,8 @@
 
 .ofertaPage {
   background: #f5f5f5;
-  .borderTop {
-  }
+
+  .borderTop {}
 }
 
 .oferta__lista__item {
@@ -63,28 +103,32 @@
     text-decoration: none;
     display: flex;
     flex-direction: column;
+
     figure {
       margin-top: 45px;
+
       @include breakpoint($md) {
         margin-top: auto;
       }
     }
   }
 }
+
 .oferta__lista__item__border {
   border-top: 2px solid $black;
   margin-top: 64px;
   padding-top: 20px;
+
   @include breakpoint($md) {
     margin-top: 38px;
   }
 }
+
 .oferta__lista__item__title {
   margin-bottom: 18px;
 }
 
-.oferta__lista {
-}
+.oferta__lista {}
 
 .technologie {
   background: $white;
@@ -95,6 +139,7 @@
   height: 100%;
   flex-direction: column;
   margin-bottom: 50px;
+
   @include breakpoint($md) {
     margin-bottom: 0;
   }
@@ -107,9 +152,11 @@
       align-items: center;
       display: flex;
     }
+
     /* justify-content: center; */
   }
 }
+
 .technologie__item__border {
   border-top: 2px solid $black;
   margin-top: 17px;
