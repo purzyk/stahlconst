@@ -32,7 +32,7 @@
 							</div>
 							<div class="header__socials__socials">
 								{% for item in options.socials %}
-									<a href="{{item.url}}"><img src="{{Image(item.ikona).src}}"></a>
+									<a target="_blank" href="{{item.url}}"><img src="{{Image(item.ikona).src}}"></a>
 								{% endfor %}
 							</div>
 
@@ -55,7 +55,7 @@
 						{% include 'components/navbar/mobile-navbar.twig' %}
 						<div class="header__socials__socials">
 							{% for item in options.socials %}
-								<a href="{{item.url}}"><img src="{{Image(item.ikona).src}}"></a>
+								<a target="_blank" href="{{item.url}}"><img src="{{Image(item.ikona).src}}"></a>
 							{% endfor %}
 						</div>
 					</div>
