@@ -43,7 +43,7 @@
 					<div class="font38 ">
 						{{ post.meta('hero_copy') }}
 					</div>
-					<a href="{{ site.link }}/o-nas" class="btn">więcej</a>
+					<a href="{{ site.link }}/o-nas" class="btn">{{options.wiecej}}</a>
 				</div>
 
 			</div>
@@ -54,7 +54,7 @@
 
 			<div class="l-row" data-aos="fade-up">
 				<div class="l-col12 borderTop addMargin">
-					<h3 class="font38_24">Oferta</h3>
+					<h3 class="font38_24">{{options.oferta}}</h3>
 
 				</div>
 			</div>
@@ -71,7 +71,7 @@
 									<img src="{{ Image(item.ikona).src }}"></figure>
 								<div class="oferta__lista__item__border">
 									<h3 class="font20_24 oferta__lista__item__title">{{ item.tytul }}</h3>
-									<p class="btn">więcej</p>
+									<p class="btn">{{options.wiecej}}</p>
 								</div>
 							</a>
 						</div>
@@ -86,10 +86,10 @@
 			<div class="l-container">
 				<div class="l-row" data-aos="fade-up">
 					<div class="l-col12 borderTop displayFlex">
-						<h3 class="font38_24">Realizacje</h3>
+						<h3 class="font38_24">{{options.realizacje}}</h3>
 						<a href="{{ site.link }}/realizacje" class="btn wszystkie__btn">
-							<span class="wszystkie__btn__desktop">wszystkie realizacje</span>
-							<span class="wszystkie__btn__mobile">wszystkie</span>
+							<span class="wszystkie__btn__desktop">{{options.wszystkie_realizacje}}</span>
+							<span class="wszystkie__btn__mobile">{{options.wszystkie}}</span>
 						</a>
 					</div>
 				</div>

@@ -1,32 +1,32 @@
 <section class="realizacje" data-aos="fade-up">
-    <div class="title">
-        <div class="l-container">
-            <div class="l-row" data-aos="fade-up">
-                <div class="l-col12 borderTop displayFlex">
-                    <h3 class="font38_24">Realizacje</h3>
-                    <a href="{{ site.link }}/realizacje" class="btn wszystkie__btn">
-                        <span class="wszystkie__btn__desktop">wszystkie realizacje</span>
-                        <span class="wszystkie__btn__mobile">wszystkie</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+	<div class="title">
+		<div class="l-container">
+			<div class="l-row" data-aos="fade-up">
+				<div class="l-col12 borderTop displayFlex">
+					<h3 class="font38_24">{{options.realizacje}}</h3>
+					<a href="{{ site.link }}/realizacje" class="btn wszystkie__btn">
+						<span class="wszystkie__btn__desktop">{{options.wszystkie_realizacje}}</span>
+						<span class="wszystkie__btn__mobile">{{options.wszystkie}}</span>
+					</a>
+				</div>
+			</div>
+		</div>
 
-    </div>
-    <div class="l-container">
-        <div class="l-row --wider" data-aos="fade-up">
-            <div class="js-realizacje realizacje__slick l-col13">
+	</div>
+	<div class="l-container">
+		<div class="l-row --wider" data-aos="fade-up">
+			<div class="js-realizacje realizacje__slick l-col13">
 
-                {% for post in realizacjePosts %}
+				{% for post in realizacjePosts %}
 
-                    {% include 'components/article__slick.twig' %}
+					{% include 'components/article__slick.twig' %}
 
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-    <div class="l-container bottomAdd">
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="l-container bottomAdd">
 
-        <div class="l-row"></div>
-    </div>
+		<div class="l-row"></div>
+	</div>
 </section>

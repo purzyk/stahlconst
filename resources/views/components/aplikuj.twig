@@ -1,26 +1,26 @@
 <section class="skontaktuj blue" data-aos="fade-up">
-    <div class="title">
-        <div class="l-container">
+	<div class="title">
+		<div class="l-container">
 
-            <div class="l-row" data-aos="fade-up">
-                <div class="l-col12 borderTop" id="aplikuj">
-                    <h3 class="font38_24">Aplikuj</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="l-container skontaktuj__bottom">
+			<div class="l-row" data-aos="fade-up">
+				<div class="l-col12 borderTop" id="aplikuj">
+					<h3 class="font38_24">{{options.aplikuj}}</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="l-container skontaktuj__bottom">
 
-        <div class="l-row" data-aos="fade-up">
-            <div class="l-col5">
-                <p class="font24">{{post.meta('tresc_przy_formularzu')}}</p>
-            </div>
-            <div class="l-col6 l-off7">
-                {% filter shortcodes|raw %}
-                    [contact-form-7 id="219" title="Aplikuj"]
-                {% endfilter %}
-            </div>
-        </div>
-    </div>
+		<div class="l-row" data-aos="fade-up">
+			<div class="l-col5">
+				<p class="font24">{{post.meta('tresc_przy_formularzu')}}</p>
+			</div>
+			<div class="l-col6 l-off7">
+				{% filter shortcodes|raw %}
+					{{options.aplikuj_formularz}}
+				{% endfilter %}
+			</div>
+		</div>
+	</div>
 
 </section>

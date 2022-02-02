@@ -20,5 +20,16 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Footer',
 		'parent_slug'	=> 'theme-general-settings',
 	));
+		
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme String Translations',
+		'menu_title'	=> 'Tłumaczenia wyrażeń',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Pliki cookies',
+		'menu_title'	=> 'Pliki cookies',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 	
 }

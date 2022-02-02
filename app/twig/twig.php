@@ -38,6 +38,8 @@ class StarterSite extends Timber\Site {
 		$context['site']  = $this;
 		$context['skontaktuj'] = images_path('skontaktuj.png');
 		$context['kategorie_realizacji'] = Timber::get_terms('kategorie_realizacji');
+		$context['lang'] 						= icl_get_languages('skip_missing=0&orderby=code');
+    	$context['curr_lang'] 					= ICL_LANGUAGE_CODE;
         
         $karieraposts = Timber::get_posts(array(
             'post_type' => 'kariera',

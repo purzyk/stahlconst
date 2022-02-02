@@ -5,7 +5,7 @@
 
 
 				<div class="l-col12 borderTop">
-					<h4 class="font38_24">Skontaktuj się z nami</h4>
+					<h4 class="font38_24">{{options.skontaktuj_sie_z_nami}}</h4>
 				</div>
 			</div>
 		</div>
@@ -18,7 +18,7 @@
 			</div>
 			<div class="l-col6 l-off7">
 				{% filter shortcodes|raw %}
-					[contact-form-7 id="8" title="Skontaktuj się z nami"]
+					{{options.formularz_kontaktowy}}
 				{% endfilter %}
 			</div>
 		</div>
