@@ -3,3 +3,21 @@
     margin-bottom: 9%;
   }
 }
+.tekstowy {
+  strong {
+    font-weight: 700;
+  }
+  a {
+    text-decoration: underline;
+  }
+  ul li {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  ul {
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: 18px;
+  }
+}
