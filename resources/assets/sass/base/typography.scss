@@ -1,8 +1,8 @@
 /* Typography */
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap');
 
 body {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-weight: 400;
   line-height: 1.75;
   color: $black;
@@ -12,6 +12,9 @@ p {
   font-size: 1.6rem;
   font-weight: 400;
   margin-bottom: 20px;
+  strong {
+    font-weight: 700;
+  }
 }
 
 h1 {
@@ -100,7 +103,6 @@ h3 {
     font-weight: 700;
   }
 }
-
 
 .font38 {
   font-size: 2rem;
