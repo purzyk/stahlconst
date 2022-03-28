@@ -139,3 +139,7 @@ add_filter( 'tiny_mce_before_init', function( $settings ){
 	return $settings;
 
 } );
+
+if ( function_exists( 'eae_encode_emails' ) )  {
+    add_filter( 'acf/load_value', 'eae_encode_emails' );
+}

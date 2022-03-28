@@ -16,6 +16,9 @@ require_once __DIR__ . '/../app/wp/options_page.php';
 // Load WordPress scripts-and-styles
 require_once __DIR__ . '/../app/wp/scripts-and-styles.php';
 
+require_once __DIR__ . '/../app/wp/post_types.php';
+
+
 // Load WordPress misc
 require_once __DIR__ . '/../app/wp/misc.php';
 

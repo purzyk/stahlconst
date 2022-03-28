@@ -53,8 +53,12 @@
 
 					<div class="header__mobileArea">
 						<div class="header__socials__lang">
-							<a class="header__socials__lang__item" href="#">en</a>
-							<a class="header__socials__lang__item" href="#">de</a>
+							{% for item in lang %}
+								{% if item.active != 1 %}
+									<a class="header__socials__lang__item" href="{{item.url}}">{{item.code}}
+									</a>
+								{% endif %}
+							{% endfor %}
 						</div>
 						{% include 'components/navbar/mobile-navbar.twig' %}
 						<div class="header__socials__socials">
